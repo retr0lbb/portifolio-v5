@@ -1,5 +1,6 @@
 import Header from "@/components/Header/_index"
-
+import {CardBody, CardContainer, CardItem} from "@/components/ui/3d-card"
+import Image from "next/image"
 
 export default function Home() {
   return (
@@ -7,11 +8,11 @@ export default function Home() {
       <Header.root>
 
       </Header.root>
-      
-      <section className="w-full grid grid-cols-3 p-20 place-items-center mt-20">
+
+      <section className="w-full grid grid-cols-2 p-20 place-items-center mt-20">
         {/**Text div main */}
         
-        <div className="font-mono col-span-2">
+        <div className="font-mono">
           <h1 className="text-8xl text-white/10 selection:bg-gray-600/40">
             Henrique Barbosa Full stack web developer
           </h1>
@@ -29,9 +30,18 @@ export default function Home() {
 
         {/** photo div main */}
         <div>
-          <div className="size-80 bg-gradient-radial from-cyan-400 to-green-400 rounded-full animate-pulse">
-
-          </div>
+          <CardContainer>
+            <CardBody>
+              <CardItem translateZ="100">
+                <Image 
+                  src="https://github.com/retr0lbb.png"
+                  alt="Avatar from retr0lbb github"
+                  width="1000"
+                  height="1000"
+                />
+              </CardItem>
+            </CardBody>
+          </CardContainer>
         </div>
       </section>
     </main>
