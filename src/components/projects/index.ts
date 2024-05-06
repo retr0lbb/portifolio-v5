@@ -1,5 +1,7 @@
+import { ProjectImage } from "./image";
 import { root } from "./root";
 
 export default {
-    root: root
+    root: root,
+    image: ProjectImage
 }

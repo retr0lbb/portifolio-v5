@@ -13,7 +13,7 @@ export default function Home() {
 
       <section className="w-full p-5 grid grid-cols-5 gap-4 place-items-center">
         <ProjectCard.root className="col-span-2">
-          <div className="size-40 bg-red-50"></div>
+          <ProjectCard.image src="https://github.com/retr0lbb.png" />
         </ProjectCard.root>
 
         <ProjectCard.root className="col-span-3 row-span-2">
@@ -27,6 +27,7 @@ export default function Home() {
         <ProjectCard.root>
           <div className="size-40 bg-red-50"></div>
         </ProjectCard.root>
+
       </section>
     </div>
   );
