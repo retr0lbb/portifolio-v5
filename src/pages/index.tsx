@@ -9,13 +9,10 @@ export default function Home() {
       
       <section className="w-full grid grid-cols-5 gap-4 p-4 mt-20">
 
-          <HeroSection.root>
+          <HeroSection.root className="bg-red-500 col-span-5">
             <HeroSection.text className="text-5xl">Henrique Barbosa</HeroSection.text>
             <HeroSection.text className="text-9xl ">Fullstack Developer</HeroSection.text>
           </HeroSection.root>
-
-          <div className="col-span-2 row-span-3 bg-blue-500">
-          </div>
 
           <div className="col-span-5 bg-black px-4 py-6 text-5xl text-white font-mono font-bold">
             Projetos:
