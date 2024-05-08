@@ -1,7 +1,7 @@
 import ProjectCard from "@/components/projects/index"
 import voteNow from "@/static/Home-black.png"
 import Motion from "@/static/70574400-9e6a-11e9-8708-22d4bf4c3322.png"
-import avatar from "@/static/Open Peeps - Bust.png"
+import HeroSection from "@/components/heroCard"
 
 export default function Home() {
   return (
@@ -9,10 +9,10 @@ export default function Home() {
       
       <section className="w-full grid grid-cols-5 gap-4 p-4 mt-20">
 
-          <section className="text-9xl text-white p-5 row-span-3 font-bold font-mono col-span-3 overflow-hidden">
-            <p>Henrique Barbosa</p>
-            <p>Full stack developer</p>
-          </section>
+          <HeroSection.root>
+            <HeroSection.text className="text-5xl">Henrique Barbosa</HeroSection.text>
+            <HeroSection.text className="text-9xl ">Fullstack Developer</HeroSection.text>
+          </HeroSection.root>
 
           <div className="col-span-2 row-span-3 bg-blue-500">
           </div>
