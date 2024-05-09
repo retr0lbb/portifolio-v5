@@ -3,14 +3,21 @@ import voteNow from "@/static/Home-black.png"
 import Motion from "@/static/70574400-9e6a-11e9-8708-22d4bf4c3322.png"
 import HeroSection from "@/components/heroCard"
 import HeroHeader from "@/components/Header/_index"
+import {Switch} from "@nextui-org/react"
+import {useState} from "react"
 
-import { LucideHome, Folder, User2} from "lucide-react"
+import { LucideHome, Folder, User2, SunDim, Moon } from "lucide-react"
 
 export default function Home() {
+
+  const [darkMode, setDarkmode] = useState(true)
+  console.log(darkMode)
+
+
   return (
     <div id="home" className="max-w-screen min-h-screen flex flex-col items-center overflow-y-hidden justify-center bg-black relative">
       <HeroHeader.root className="justify-between">
-        <nav className="text-white">
+        <nav className="text-white/80">
           <ul className="flex items-center justify-evenly gap-4 text-xl">
             <li className="flex items-center justify-center gap-1"><LucideHome /><a href="#home">Home</a></li>
             <li className="flex items-center justify-center gap-1"><Folder /><a href="#home">Projetos</a></li>
@@ -19,7 +26,14 @@ export default function Home() {
         </nav>
 
         <div>
-          <input type="checkbox" />
+          <Switch 
+          size="lg"
+          color="default"
+            isSelected={darkMode} 
+            onValueChange={setDarkmode} 
+            startContent={<Moon />}
+            endContent={<SunDim />}
+          />
         </div>
       </HeroHeader.root>
       <section className="w-full grid grid-cols-5 gap-4 p-4 mt-24">
