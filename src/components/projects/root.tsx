@@ -2,6 +2,7 @@ import React, {ComponentProps} from "react"
 import { twMerge } from "tailwind-merge"
 import {Github, Linkedin, Globe} from "lucide-react"
 import { IconButton } from "../iconButton"
+import { BackgroundGradient } from "../ui/backgound-gradient"
 
 
 interface rootProps extends ComponentProps<"div">{

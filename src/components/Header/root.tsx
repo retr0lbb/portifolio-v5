@@ -1,8 +1,16 @@
+import React from "react"
+import { twMerge } from "tailwind-merge"
 
-export const root: React.FC = () => {
+
+interface rootProps extends React.ComponentProps<"header"> {}
+export const root: React.FC<rootProps> = ({className, children, ...rest}) => {
     return(
-        <header className="w-screen flex min-h-24 absolute bg-red-500 top-0 right-0 left-0">
-
+        <header 
+        className={
+            twMerge("fixed w-screen z-50 top-0 min-h-16 flex items-center justify-center px-12 border-b glass",
+            className)
+        } {...rest}>
+            {children}
         </header>
     )
 }

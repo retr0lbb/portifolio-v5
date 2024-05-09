@@ -6,6 +6,6 @@ interface HeroTextProps extends ComponentProps<"p"> {}
 
 export const HeroText: React.FC<HeroTextProps> = ({className, ...rest}) => {
     return(
-        <p className={twMerge("text-white", className)} {...rest}/>
+        <p className={twMerge("text-white select-none", className)} {...rest}/>
     )
 }
