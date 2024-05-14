@@ -86,26 +86,35 @@ export default function Home() {
             />
           </Card>
 
-          <div className="col-span-3 bg-red-500 p-5">
-            <h1>Olá 👋</h1>
-            <h2>🙍Meu nome é Henrique Barbosa Sampaio.</h2>
-            <p>tenho 18 anos moro em São paulo, Brasil.</p>
-            <p>programo des dos 15 anos de idade. Tenho proficiencia em programação web.</p>
-            <span>Principalmente com tecnologias javascript.</span>
-            <span>Além disso, também tenho proficiencia em aplicações Mobile tanto Android quanto Ios</span>
-            <span>E gosto bastante da area de sistemas embarcados.</span>
+          
 
-            <span>No meu tempo livre eu gosto de assistir filmes e animações japonesas</span>
-            <span>também gosto de jogar jogos eletronicos, de preferencia jogos souls-like</span>
-            <span>e por fim também gosto de tentar construir coisas com o arduino</span>
+          <section className="col-span-3 bg-red-500 p-5">
+  <header>
+    <h1>Olá 👋</h1>
+    <h2>Meu nome é Henrique Barbosa Sampaio.</h2>
+  </header>
+  
+  <article>
+    <h3>Informações Pessoais:</h3>
+    <p>Tenho 18 anos e moro em São Paulo, Brasil.</p>
+    <p>Programo desde os 15 anos de idade, com proficiência em programação web, principalmente em tecnologias JavaScript.</p>
+    <p>Também tenho experiência em aplicações Mobile, tanto para Android quanto iOS, e interesse na área de sistemas embarcados.</p>
+  </article>
+  
+  <article>
+    <h3>Interesses:</h3>
+    <p>No meu tempo livre, gosto de assistir filmes e animações japonesas.</p>
+    <p>Também curto jogar jogos eletrônicos, especialmente jogos do estilo souls-like.</p>
+    <p>E, por fim, gosto de trabalhar com o Arduino para criar projetos.</p>
+  </article>
+  
+  <footer>
+    <h3>Entre em Contato:</h3>
+    <p>Quer jogar papo fora? <button>Me mande uma mensagem no Instagram</button></p>
+    <p>Quer impulsionar o seu negócio? <button>Fale diretamente comigo pelo meio que preferir</button></p>
+  </footer>
+</section>
 
-            <div>
-              <p>Quer jogar papo fora?</p>
-              <button>Me mande uma mensagem no instagram</button>
-              <p>Quer impulsionar o seu negocio?</p>
-              <button>Fale diretamente comigo pelo jeito que preferir</button>
-            </div>
-          </div>
 
 
 
