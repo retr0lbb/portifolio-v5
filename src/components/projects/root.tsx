@@ -19,7 +19,7 @@ export const root: React.FC<rootProps> = ({...props}) => {
             {props.children}
 
             <div
-                className="absolute bg-gradient-to-r from-black/80 to-black/30 inset-0 group-hover:translate-x-0 transition-all 
+                className="absolute backdrop-filter bg-gradient-to-r from-black/80 to-black/30 inset-0 group-hover:translate-x-0 transition-all 
                 duration-75 -translate-x-full p-4 grid"
             >
                 <div>
