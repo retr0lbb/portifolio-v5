@@ -5,6 +5,7 @@ import HeroSection from "@/components/heroCard"
 import HeroHeader from "@/components/Header/_index"
 import {Switch, Image} from "@nextui-org/react"
 import {Card, CardHeader, CardBody, CardFooter,} from "@nextui-org/card";
+import placeHolder from "@/static/placeholder.jpeg"
 import {useState} from "react"
 
 import { LucideHome, Folder, User2, SunDim, Moon, Car } from "lucide-react"
@@ -76,12 +77,35 @@ export default function Home() {
 
 
           <Card
-            isBlurred
             radius="lg"
-            className="border-none"
+            className="border-none col-span-2"
           >
-            <Image />
+            <Image 
+              alt="beautiful man looking down"
+              src={placeHolder.src}
+            />
           </Card>
+
+          <div className="col-span-3 bg-red-500 p-5">
+            <h1>Olá 👋</h1>
+            <h2>🙍Meu nome é Henrique Barbosa Sampaio.</h2>
+            <p>tenho 18 anos moro em São paulo, Brasil.</p>
+            <p>programo des dos 15 anos de idade. Tenho proficiencia em programação web.</p>
+            <span>Principalmente com tecnologias javascript.</span>
+            <span>Além disso, também tenho proficiencia em aplicações Mobile tanto Android quanto Ios</span>
+            <span>E gosto bastante da area de sistemas embarcados.</span>
+
+            <span>No meu tempo livre eu gosto de assistir filmes e animações japonesas</span>
+            <span>também gosto de jogar jogos eletronicos, de preferencia jogos souls-like</span>
+            <span>e por fim também gosto de tentar construir coisas com o arduino</span>
+
+            <div>
+              <p>Quer jogar papo fora?</p>
+              <button>Me mande uma mensagem no instagram</button>
+              <p>Quer impulsionar o seu negocio?</p>
+              <button>Fale diretamente comigo pelo jeito que preferir</button>
+            </div>
+          </div>
 
 
 
