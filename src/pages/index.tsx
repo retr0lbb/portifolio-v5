@@ -3,17 +3,15 @@ import voteNow from "@/static/Home-black.png"
 import Motion from "@/static/70574400-9e6a-11e9-8708-22d4bf4c3322.png"
 import HeroSection from "@/components/heroCard"
 import HeroHeader from "@/components/Header/_index"
-import {Switch, Image} from "@nextui-org/react"
-import {Card, CardHeader, CardBody, CardFooter,} from "@nextui-org/card";
-import placeHolder from "@/static/placeholder.jpeg"
+import {Switch} from "@nextui-org/react"
 import {useState} from "react"
-
-import { LucideHome, Folder, User2, SunDim, Moon, Car } from "lucide-react"
+import {FaNodeJs, FaReact} from "react-icons/fa"
+import { LucideHome, Folder, User2, SunDim, Moon } from "lucide-react"
+import { AboutCard } from "@/components/about/aboutCard"
 
 export default function Home() {
 
   const [darkMode, setDarkmode] = useState(true)
-  console.log(darkMode)
 
 
   return (
@@ -75,49 +73,50 @@ export default function Home() {
             Sobre Mim
           </div>
 
-
-          <Card
-            radius="lg"
-            className="border-none col-span-2"
-          >
-            <Image 
-              alt="beautiful man looking down"
-              src={placeHolder.src}
-            />
-          </Card>
+          <AboutCard />
 
           
 
-          <section className="col-span-3 bg-red-500 p-5">
-  <header>
-    <h1>Olá 👋</h1>
-    <h2>Meu nome é Henrique Barbosa Sampaio.</h2>
-  </header>
-  
-  <article>
-    <h3>Informações Pessoais:</h3>
-    <p>Tenho 18 anos e moro em São Paulo, Brasil.</p>
-    <p>Programo desde os 15 anos de idade, com proficiência em programação web, principalmente em tecnologias JavaScript.</p>
-    <p>Também tenho experiência em aplicações Mobile, tanto para Android quanto iOS, e interesse na área de sistemas embarcados.</p>
-  </article>
-  
-  <article>
-    <h3>Interesses:</h3>
-    <p>No meu tempo livre, gosto de assistir filmes e animações japonesas.</p>
-    <p>Também curto jogar jogos eletrônicos, especialmente jogos do estilo souls-like.</p>
-    <p>E, por fim, gosto de trabalhar com o Arduino para criar projetos.</p>
-  </article>
-  
-  <footer>
-    <h3>Entre em Contato:</h3>
-    <p>Quer jogar papo fora? <button>Me mande uma mensagem no Instagram</button></p>
-    <p>Quer impulsionar o seu negócio? <button>Fale diretamente comigo pelo meio que preferir</button></p>
-  </footer>
-</section>
+          <section className="col-span-3 bg-red-500 p-5 flex flex-col justify-around">
+            <header className="w-full">
+              <h1 className="text-9xl font-bold">Olá 👋</h1>
+              <h2 className="text-2xl mt-2">Meu nome é Henrique Barbosa Sampaio.</h2>
+              <h2 className="text-2xl">Eu sou um <span className="text-3xl font-bold font-mono">desenvolvedor fullstack</span></h2>
+            </header>
+
+            <article className="w-full">
+              <h3 className="text-3xl font-bold">Informações Pessoais:</h3>
+              <p>Tenho 18 anos e moro em São Paulo, Brasil.</p>
+              <p>Programo desde os 15 anos de idade, com proficiência em programação web, principalmente em tecnologias JavaScript.</p>
+              <p>como React, Nodejs, </p>
+              <span className="flex items-center gap-0.5">
+                <FaNodeJs color="lime" />
+                <p className="underline cursor-pointer select-none">Nodejs</p>
+              </span>
+
+              <span className="flex items-center gap-0.5">
+                <FaReact color="cyan" />
+                <p className="underline cursor-pointer select-none">ReactJs</p>
+              </span>
 
 
+              
+              <p>Também tenho experiência em aplicações Mobile, tanto para Android quanto iOS, e interesse na área de sistemas embarcados.</p>
+            </article>
 
+            <article>
+              <h3>Interesses:</h3>
+              <p>No meu tempo livre, gosto de assistir filmes e animações japonesas.</p>
+              <p>Também curto jogar jogos eletrônicos, especialmente jogos do estilo souls-like.</p>
+              <p>E, por fim, gosto de trabalhar com o Arduino para criar projetos.</p>
+            </article>
 
+            <footer>
+              <h3>Entre em Contato:</h3>
+              <p>Quer jogar papo fora? <button>Me mande uma mensagem no Instagram</button></p>
+              <p>Quer impulsionar o seu negócio? <button>Fale diretamente comigo pelo meio que preferir</button></p>
+            </footer>
+          </section>
       </section>
     </div>
   );
