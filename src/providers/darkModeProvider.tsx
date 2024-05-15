@@ -1,5 +1,15 @@
-export const darkModeProvider: React.FC = () => {
+import React, { Children } from "react";
+
+interface DarkmodeProviderProps{
+    children: React.ReactNode
+}
+
+const DarkModeContext = React.createContext(undefined)
+
+export const darkModeProvider: React.FC<DarkmodeProviderProps> = ({children}) => {
     return(
-        <div />
+        <DarkModeContext.Provider value={undefined}>
+            {children}
+        </DarkModeContext.Provider>
     )
 }
