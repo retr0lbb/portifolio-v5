@@ -3,11 +3,13 @@ import voteNow from "@/static/Home-black.png"
 import Motion from "@/static/70574400-9e6a-11e9-8708-22d4bf4c3322.png"
 import HeroSection from "@/components/heroCard"
 import HeroHeader from "@/components/Header/_index"
-import {Switch} from "@nextui-org/react"
+import {Switch, Button} from "@nextui-org/react"
 import {useState} from "react"
-import {FaNodeJs, FaReact} from "react-icons/fa"
+import {FaNodeJs, FaReact, FaInstagram} from "react-icons/fa"
+import {SiArduino} from "react-icons/si"
 import { LucideHome, Folder, User2, SunDim, Moon } from "lucide-react"
 import { AboutCard } from "@/components/about/aboutCard"
+import { AboutTecnologiesLabel } from "@/components/about/aboutTecnologiesLabel"
 
 export default function Home() {
 
@@ -88,33 +90,42 @@ export default function Home() {
               <h3 className="text-3xl font-bold">Informações Pessoais:</h3>
               <p>Tenho 18 anos e moro em São Paulo, Brasil.</p>
               <p>Programo desde os 15 anos de idade, com proficiência em programação web, principalmente em tecnologias JavaScript.</p>
-              <p>como React, Nodejs, </p>
-              <span className="flex items-center gap-0.5">
-                <FaNodeJs color="lime" />
-                <p className="underline cursor-pointer select-none">Nodejs</p>
-              </span>
-
-              <span className="flex items-center gap-0.5">
-                <FaReact color="cyan" />
-                <p className="underline cursor-pointer select-none">ReactJs</p>
-              </span>
-
-
-              
+              <p className="flex">como:  
+                <AboutTecnologiesLabel  className="" textClassName="no-underline" Icon={FaReact} iconColor="cyan">
+                  ReactJs
+                </AboutTecnologiesLabel>,
+                <AboutTecnologiesLabel className="" textClassName="no-underline" Icon={FaNodeJs} iconColor="lime">
+                  NodeJs
+                </AboutTecnologiesLabel>
+              </p>
               <p>Também tenho experiência em aplicações Mobile, tanto para Android quanto iOS, e interesse na área de sistemas embarcados.</p>
             </article>
 
-            <article>
-              <h3>Interesses:</h3>
-              <p>No meu tempo livre, gosto de assistir filmes e animações japonesas.</p>
-              <p>Também curto jogar jogos eletrônicos, especialmente jogos do estilo souls-like.</p>
-              <p>E, por fim, gosto de trabalhar com o Arduino para criar projetos.</p>
+            <article className="w-full">
+              <h3 className="text-3xl font-bold">Interesses:</h3>
+              <p>No meu tempo livre, gosto de assistir filmes🎥 e animações japonesas🤖.</p>
+              <p>Também curto jogar jogos eletrônicos🎮, especialmente jogos do estilo souls-like⚔️.</p>
+              <p className="flex">E, por fim, gosto de trabalhar com o 
+              <AboutTecnologiesLabel className="" textClassName="no-underline" Icon={SiArduino} iconColor="blue">
+                 Arduino
+              </AboutTecnologiesLabel> para criar projetos.</p>
             </article>
 
-            <footer>
-              <h3>Entre em Contato:</h3>
-              <p>Quer jogar papo fora? <button>Me mande uma mensagem no Instagram</button></p>
-              <p>Quer impulsionar o seu negócio? <button>Fale diretamente comigo pelo meio que preferir</button></p>
+            <footer className="w-full flex flex-col gap-2">
+              <h3 className="text-3xl font-bold">Entre em Contato:</h3>
+              <div className="flex flex-col">
+                <p>Quer jogar papo fora?</p>
+                <Button 
+                  variant="flat"
+                  startContent={<FaInstagram />} 
+                  className="max-w-max outline-none"
+                >Me mande uma mensagem no Instagram</Button>
+              </div>
+
+              <div>
+                <p>Quer um website para o seu negócio?</p>
+                <Button className="max-w-max">Fale diretamente comigo pelo meio que preferir</Button>
+              </div>
             </footer>
           </section>
       </section>
