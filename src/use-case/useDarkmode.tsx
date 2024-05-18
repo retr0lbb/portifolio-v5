@@ -1,17 +1,20 @@
 import { useState } from "react"
+import {setCookie, parseCookies} from "nookies"
 
-export default function useDarkmode<T= unknown>(){
+export interface darkModeProviderTypes{
+    isDarkModed: boolean,
+    toogleDarkmode: () => void
+}
 
-    const getDarkmodeFromLocalStorage = localStorage.getItem("@henrydev/darkmode") === "true"
-
-    const [isDarkModed, setIsDarkmoded] = useState(getDarkmodeFromLocalStorage ?? true)
+export function useDarkmode(){
+    const [isDarkModed, setIsDarkmoded] = useState(false)
 
     function toogleDarkmode(){
-        if(isDarkModed == true){
-            localStorage.setItem("@henrydev/darkmode", "true")
-        }
+        setIsDarkmoded((prev) => {
+            return !prev
+        })
     }
 
 
-    return {isDarkModed, }
+    return {isDarkModed, toogleDarkmode}
 }
