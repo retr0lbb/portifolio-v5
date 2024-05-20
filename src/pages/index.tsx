@@ -3,14 +3,13 @@
   import Motion from "@/static/70574400-9e6a-11e9-8708-22d4bf4c3322.png"
   import HeroSection from "@/components/heroCard"
   import HeroHeader from "@/components/Header/_index"
-  import {Switch, Button} from "@nextui-org/react"
-  import {useState} from "react"
-  import {FaNodeJs, FaReact, FaInstagram} from "react-icons/fa"
-  import { PiDevices } from  "react-icons/pi"
-  import {SiArduino} from "react-icons/si"
-  import { LucideHome, Folder, User2, SunDim, Moon, Clapperboard } from "lucide-react"
+  import { Switch } from "@nextui-org/react"
+  import { useState } from "react"
+  import { FaNodeJs, FaReact } from "react-icons/fa"
+  import { SiArduino } from "react-icons/si"
+  import { LucideHome, Folder, User2, SunDim, Moon, Clapperboard, Joystick, Binary, Backpack } from "lucide-react"
   import { AboutCard } from "@/components/about/aboutCard"
-  import { AboutTecnologiesLabel } from "@/components/about/aboutTecnologiesLabel"
+  import { SiUdemy } from "react-icons/si";
   import NanoCard from "@/components/about/nano-card"
 
   export default function Home() {
@@ -78,77 +77,73 @@
             </div>
 
             <AboutCard />
-
-            <NanoCard.root>
+            <NanoCard.root className="row-span-1">
               <NanoCard.title>Tecnologias</NanoCard.title>
-              <NanoCard.body>
-                <Clapperboard />
+              <NanoCard.body className="grid-cols-2 gap-2">
+                <div className="bg-black/30 rounded-md flex items-center justify-center">
+                  <FaReact size={64} color="cyan" />
+                </div>
+
+                <div className="bg-black/30 rounded-md flex items-center justify-center">
+                  <FaNodeJs size={64} color="lime" />
+                </div>
+
+                <div className="bg-black/30 rounded-md flex items-center justify-center">
+                  <SiArduino size={64} color="teal" />
+                </div>
+
+                <div className="bg-black/30 rounded-md flex items-center justify-center">
+                  <FaReact size={64} color="darkblue" />
+                </div>
               </NanoCard.body>
             </NanoCard.root>
 
+            <NanoCard.root className="col-span-2">
+              <NanoCard.title>Interesses</NanoCard.title>
+              <NanoCard.body className="grid-cols-3 grid-rows-1 gap-4 p-3">
+                
+                <div className="bg-black/40 flex flex-col items-center justify-center px-5 py-4">
+                  <div className="text-xl p-2">Filmes</div>
+                  <Clapperboard className="flex-1" size={64} color="darkgray"/>
+                  <p className="text-xs w-full text-zinc-500 p-2 text-justify">principalmente de filmes de ação ou filmes de animação como sonic entre outros.</p>
+                </div>
+
+                <div className="bg-black/40 flex flex-col items-center justify-center px-5 py-4">
+                  <div className="text-xl p-2">Games</div>
+                    <Joystick className="flex-1" size={64} color="darkgray"/>
+                  <p className="text-xs w-full text-zinc-500 p-2 text-justify">Adoro jogos como Fallout 4, Dark souls 3, Devil may cry 5 entre outros.</p>
+                </div>
+
+                <div className="bg-black/40 flex flex-col items-center justify-center px-5 py-4">
+                  <div className="text-xl p-2">Programação</div>
+                  <Binary className="flex-1" size={64} color="darkgray"/>
+                  <p className="text-xs w-full text-zinc-500 p-2 text-justify">Gosto de programar aplicações back-end e front end para aprender novas tecnologias.</p>
+                </div>
+              </NanoCard.body>
+            </NanoCard.root>
+
+            <NanoCard.root className="col-span-2">
+              <NanoCard.title>Educação</NanoCard.title>
+              <NanoCard.body className="grid-cols-2 grid-rows-1 place-items-center gap-2">
+                <div className="w-full h-full flex flex-col items-center p-4 bg-black/35 rounded-md">
+                  <div className="text-xl text-zinc-200">Udemy</div>
+                  <SiUdemy size={64} className="flex-1" />
+                  <p className="text-sm text-zinc-500">Concluido os cursos de reactjs, nodejs, nestjs framework com exelencia</p>
+                </div>
+                <div className="w-full h-full flex flex-col items-center p-4 bg-black/35 rounded-md">
+                  <div className="text-xl text-zinc-200">Escola Tecnica Estadual Uirapuru</div>
+                  <Backpack size={64} className="flex-1" />
+                  <p className="text-sm text-zinc-500">Graduado no curso de Desenvolvimento de sistemas na modalidade Ensino Técnico Integrado ao Ensino Médio(ETIM)</p>
+                </div>
+              </NanoCard.body>
+            </NanoCard.root>
             <NanoCard.root>
+
               <NanoCard.title>Interesses</NanoCard.title>
               <NanoCard.body>
                 <Clapperboard />
               </NanoCard.body>
             </NanoCard.root>
-
-            <section className="col-span-5 bg-white/10 rounded-xl p-5 flex flex-col justify-around">
-              <header className="w-full">
-                <h1 className="text-9xl font-bold">Olá 👋</h1>
-                <h2 className="text-2xl mt-2">Meu nome é Henrique Barbosa Sampaio.</h2>
-                <h2 className="text-2xl">Eu sou um <span className="text-3xl font-bold font-mono">desenvolvedor fullstack</span></h2>
-              </header>
-
-              <article className="w-full">
-                <h3 className="text-3xl font-bold">Informações Pessoais:</h3>
-                <p>Tenho 18 anos e moro em São Paulo, Brasil.</p>
-                <p>Programo desde os 15 anos de idade, com proficiência em programação web, principalmente em tecnologias JavaScript.</p>
-                <p className="flex">como:  
-                  
-                  <AboutTecnologiesLabel className="" textClassName="no-underline" Icon={FaNodeJs} iconColor="lime">
-                    NodeJs
-                  </AboutTecnologiesLabel>
-                </p>
-                <p>Também tenho experiência em aplicações Mobile, tanto para Android quanto iOS, e interesse na área de sistemas embarcados.</p>
-              </article>
-
-              <article className="w-full">
-                <h3 className="text-3xl font-bold">Interesses:</h3>
-                <p>No meu tempo livre, gosto de assistir filmes🎥 e animações japonesas🤖.</p>
-                <p>Também curto jogar jogos eletrônicos🎮, especialmente jogos do estilo souls-like⚔️.</p>
-                <p className="flex">E, por fim, gosto de trabalhar com o 
-                <AboutTecnologiesLabel className="" textClassName="no-underline" Icon={SiArduino} iconColor="blue">
-                  Arduino
-                </AboutTecnologiesLabel> para criar projetos.</p>
-              </article>
-
-              <footer className="w-full flex flex-col gap-2">
-                <h3 className="text-3xl font-bold">Entre em Contato:</h3>
-                
-                <div className="w-full flex items-center gap-7">
-                <div className="flex flex-col">
-                  <p>Quer jogar papo fora?</p>
-                  <Button 
-                    variant="flat"
-                    startContent={<FaInstagram />} 
-                    className="max-w-max outline-none"
-                    color="success"
-                  >Me mande uma mensagem no Instagram</Button>
-                </div>
-
-                <div>
-                  <p>Quer um website para o seu negócio?</p>
-                  <Button 
-                    startContent={<PiDevices />} 
-                    className="max-w-max"
-                    variant="flat"
-                    color="secondary"
-                  >Fale diretamente comigo pelo meio que preferir</Button>
-                </div>
-                </div>
-              </footer>
-            </section>
         </section>
       </div>
     );

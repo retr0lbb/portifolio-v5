@@ -6,7 +6,7 @@ export const AboutCard: React.FC = () => {
     return(
         <Card
             radius="lg"
-            className="border-none"
+            className="border-none row-span-2 col-span-2"
         >
             <Image 
               alt="beautiful man looking down"
