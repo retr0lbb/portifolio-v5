@@ -11,6 +11,7 @@
   import { AboutCard } from "@/components/about/aboutCard"
   import { SiUdemy } from "react-icons/si";
   import NanoCard from "@/components/about/nano-card"
+  import { motion, AnimatePresence } from "framer-motion"
 
   export default function Home() {
 
@@ -72,7 +73,7 @@
             <ProjectCard.image src={Motion.src} />
           </ProjectCard.root>
 
-            <div className="col-span-5 text-7xl font-bold bg-red-500 py-4 px-10">
+            <div className="col-span-5 text-7xl font-bold py-5 mt-10 mb-5 px-10">
               Olá 👋 Meu nome é Henrique Barbosa Sampaio. Veja um pouco mais sobre mim
             </div>
 
@@ -135,13 +136,6 @@
                   <Backpack size={64} className="flex-1" />
                   <p className="text-sm text-zinc-500">Graduado no curso de Desenvolvimento de sistemas na modalidade Ensino Técnico Integrado ao Ensino Médio(ETIM)</p>
                 </div>
-              </NanoCard.body>
-            </NanoCard.root>
-            <NanoCard.root>
-
-              <NanoCard.title>Interesses</NanoCard.title>
-              <NanoCard.body>
-                <Clapperboard />
               </NanoCard.body>
             </NanoCard.root>
         </section>
