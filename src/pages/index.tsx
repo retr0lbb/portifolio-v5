@@ -8,9 +8,10 @@
   import {FaNodeJs, FaReact, FaInstagram} from "react-icons/fa"
   import { PiDevices } from  "react-icons/pi"
   import {SiArduino} from "react-icons/si"
-  import { LucideHome, Folder, User2, SunDim, Moon } from "lucide-react"
+  import { LucideHome, Folder, User2, SunDim, Moon, Clapperboard } from "lucide-react"
   import { AboutCard } from "@/components/about/aboutCard"
   import { AboutTecnologiesLabel } from "@/components/about/aboutTecnologiesLabel"
+  import NanoCard from "@/components/about/nano-card"
 
   export default function Home() {
 
@@ -72,15 +73,27 @@
             <ProjectCard.image src={Motion.src} />
           </ProjectCard.root>
 
-            <div className="col-span-5 bg-black px-4 py-6 text-5xl text-white font-mono font-bold">
-              Sobre Mim
+            <div className="col-span-5 text-7xl font-bold bg-red-500 py-4 px-10">
+              Olá 👋 Meu nome é Henrique Barbosa Sampaio. Veja um pouco mais sobre mim
             </div>
 
             <AboutCard />
 
-            
+            <NanoCard.root>
+              <NanoCard.title>Tecnologias</NanoCard.title>
+              <NanoCard.body>
+                <Clapperboard />
+              </NanoCard.body>
+            </NanoCard.root>
 
-            <section className="col-span-3 bg-white/10 rounded-xl p-5 flex flex-col justify-around">
+            <NanoCard.root>
+              <NanoCard.title>Interesses</NanoCard.title>
+              <NanoCard.body>
+                <Clapperboard />
+              </NanoCard.body>
+            </NanoCard.root>
+
+            <section className="col-span-5 bg-white/10 rounded-xl p-5 flex flex-col justify-around">
               <header className="w-full">
                 <h1 className="text-9xl font-bold">Olá 👋</h1>
                 <h2 className="text-2xl mt-2">Meu nome é Henrique Barbosa Sampaio.</h2>
@@ -92,9 +105,7 @@
                 <p>Tenho 18 anos e moro em São Paulo, Brasil.</p>
                 <p>Programo desde os 15 anos de idade, com proficiência em programação web, principalmente em tecnologias JavaScript.</p>
                 <p className="flex">como:  
-                  <AboutTecnologiesLabel  className="" textClassName="no-underline" Icon={FaReact} iconColor="cyan">
-                    ReactJs
-                  </AboutTecnologiesLabel>,
+                  
                   <AboutTecnologiesLabel className="" textClassName="no-underline" Icon={FaNodeJs} iconColor="lime">
                     NodeJs
                   </AboutTecnologiesLabel>
