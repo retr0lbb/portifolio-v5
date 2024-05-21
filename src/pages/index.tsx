@@ -19,7 +19,7 @@
 
 
   return (
-    <div id="home" className="max-w-screen min-h-screen flex flex-col items-center overflow-y-hidden justify-center dark:bg-red-50 bg-black relative">
+    <div id="home" className="max-w-screen min-h-screen flex flex-col items-center overflow-y-hidden justify-center bg-black relative">
       <HeroHeader.root className="justify-between">
         <nav className="text-white/60">
           <ul className="flex items-center justify-evenly gap-4 text-xl">
