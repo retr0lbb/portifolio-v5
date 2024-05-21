@@ -2,9 +2,8 @@
   import voteNow from "@/static/Home-black.png"
   import Motion from "@/static/70574400-9e6a-11e9-8708-22d4bf4c3322.png"
   import HeroSection from "@/components/heroCard"
-  import HeroHeader from "@/components/Header/_index"
+  import HeroHeader from "@/components/Header"
   import { Switch } from "@nextui-org/react"
-  import { useState } from "react"
   import { FaNodeJs, FaReact } from "react-icons/fa"
   import { SiArduino } from "react-icons/si"
   import { LucideHome, Folder, User2, SunDim, Moon, Clapperboard, Joystick, Binary, Backpack } from "lucide-react"
@@ -15,17 +14,16 @@
 
   export default function Home() {
 
-    const [darkMode, setDarkmode] = useState(true)
-
-
   return (
-    <div id="home" className="max-w-screen min-h-screen flex flex-col items-center overflow-y-hidden justify-center bg-black relative">
+    <div id="home" 
+      className="max-w-screen min-h-screen flex flex-col items-center overflow-y-hidden justify-center bg-black relative"
+    >
       <HeroHeader.root className="justify-between">
         <nav className="text-white/60">
           <ul className="flex items-center justify-evenly gap-4 text-xl">
-            <li className="flex items-center justify-center gap-1 hover:text-white transition-colors cursor-pointer"><LucideHome /><a href="#home">Home</a></li>
-            <li className="flex items-center justify-center gap-1 hover:text-white transition-colors cursor-pointer"><Folder /><a href="#home">Projetos</a></li>
-            <li className="flex items-center justify-center gap-1 hover:text-white transition-colors cursor-pointer"><User2 /><a href="#home">Sobre mim</a></li>
+            <HeroHeader.link to="#home" Icon={LucideHome}>Home</HeroHeader.link>
+            <HeroHeader.link to="#project" Icon={Folder}>Projects</HeroHeader.link>
+            <HeroHeader.link to="#about" Icon={User2}>Sobre mim</HeroHeader.link>
           </ul>
         </nav>
 
@@ -33,8 +31,6 @@
             <Switch 
             size="lg"
             color="default"
-              isSelected={darkMode} 
-              onValueChange={setDarkmode} 
               startContent={<Moon />}
               endContent={<SunDim />}
             />
@@ -49,7 +45,7 @@
             <HeroSection.buttons />
           </HeroSection.root>
 
-          <div className="col-span-5 bg-black px-4 py-6 text-5xl text-white font-mono font-bold">
+          <div id="project" className="col-span-5 bg-black px-4 py-6 text-5xl text-white font-mono font-bold">
             Projetos:
           </div>
 
@@ -73,10 +69,7 @@
           <ProjectCard.image src={Motion.src} />
         </ProjectCard.root>
 
-          <div className="col-span-5 bg-black px-4 py-6 text-5xl text-white font-mono font-bold">
-            Sobre Mim
-          </div>
-            <div className="col-span-5 text-7xl font-bold py-5 mt-10 mb-5 px-10">
+            <div id="about" className="col-span-5 text-7xl font-bold py-5 mt-10 mb-5 px-10">
               Olá 👋 Meu nome é Henrique Barbosa Sampaio. Veja um pouco mais sobre mim
             </div>
 
@@ -121,7 +114,7 @@
                 <div className="bg-black/40 flex flex-col items-center justify-center px-5 py-4">
                   <div className="text-xl p-2">Programação</div>
                   <Binary className="flex-1" size={64} color="darkgray"/>
-                  <p className="text-xs w-full text-zinc-500 p-2 text-justify">Gosto de programar aplicações back-end e front end para aprender novas tecnologias.</p>
+                  <p className="text-xs w-full text-zinc-500 p-2">Gosto de programar aplicações back-end e front end para aprender novas tecnologias.</p>
                 </div>
               </NanoCard.body>
             </NanoCard.root>
