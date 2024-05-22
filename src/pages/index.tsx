@@ -193,3 +193,15 @@
       </div>
     );
   }
+
+
+  /**
+   * Referencias para caso eu me perca
+   * 
+   * Free-for-all: https://olaolu.dev
+   * mouseIntegration: https://www.codewonders.dev
+   * image-reference: https://www.adhamdannaway.com
+   * scroll-animation-1: https://www.onyedika.xyz
+   * cards: https://www.seanhalpin.xyz
+   * mouse-&&-scroll-animation: https://tamalsen.dev
+   */
