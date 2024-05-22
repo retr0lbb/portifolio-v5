@@ -4,14 +4,15 @@
   import HeroSection from "@/components/heroCard"
   import HeroHeader from "@/components/Header"
   import { Switch, Snippet } from "@nextui-org/react"
-  import { FaNodeJs, FaReact } from "react-icons/fa"
+  import { FaNodeJs, FaReact, FaGithub } from "react-icons/fa"
   import { SiArduino } from "react-icons/si"
-  import { LucideHome, Folder, User2, SunDim, Moon, Clapperboard, Joystick, Binary, Backpack, Mail } from "lucide-react"
+  import { LucideHome, Folder, User2, SunDim, Moon, Clapperboard, Joystick, Binary, Backpack, Mail, Github, Linkedin, Instagram, Twitter, X } from "lucide-react"
   import { AboutCard } from "@/components/about/aboutCard"
   import { SiUdemy } from "react-icons/si";
   import NanoCard from "@/components/about/nano-card"
   import Contact from "@/components/contact"
   import { IconButton } from "@/components/iconButton"
+  import { BsTwitterX } from "react-icons/bs"
 
 
   export default function Home() {
@@ -38,7 +39,7 @@
      
 
         </HeroHeader.root>
-        <section className="w-full grid grid-cols-5 gap-4 p-4 mt-24 bg-blue-500">
+        <section className="w-full grid grid-cols-5 gap-4 p-4 mt-24">
 
           <HeroSection.root>
             <HeroSection.text className="text-5xl">Henrique Barbosa</HeroSection.text>
@@ -160,13 +161,31 @@
 
         </section>
 
-        <footer className="w-screen h-36 bg-green-500 flex items-center justify-around">
-          <a>© 2024 Henrique Barbosa</a>
+        <footer className="w-screen py-4 bg-white/5 flex items-center justify-around">
+          <a className="underline text-xl" href="http://localhost:3000">© 2024 Henrique Barbosa</a>
+          <div className="flex flex-col gap-2">
+            <p>Redes sociais:</p>
+            <div className="flex items-center gap-3">
+              <IconButton className="bg-transparent hover:bg-transparent border-none hover:scale-105 size-10">
+               <Github />
+              </IconButton>
 
-          <div className="flex items-center justify-evenly">
-            <IconButton>
+              <IconButton className="bg-transparent hover:bg-transparent border-none hover:scale-105 size-10">
+                <Linkedin />
+              </IconButton>
 
-            </IconButton>
+              <IconButton className="bg-transparent hover:bg-transparent border-none hover:scale-105 size-10">
+                <Mail />
+              </IconButton>
+
+              <IconButton className="bg-transparent hover:bg-transparent border-none hover:scale-105 size-10">
+                <Instagram />
+              </IconButton>
+
+              <IconButton className="bg-transparent hover:bg-transparent border-none hover:scale-105 size-10">
+                <BsTwitterX />
+              </IconButton>
+            </div>
           </div>
         </footer>
 
