@@ -10,13 +10,15 @@
   import { AboutCard } from "@/components/about/aboutCard"
   import { SiUdemy } from "react-icons/si";
   import NanoCard from "@/components/about/nano-card"
+  import Contact from "@/components/contact"
+  import { IconButton } from "@/components/iconButton"
 
 
   export default function Home() {
 
   return (
     <div id="home" 
-      className="max-w-screen min-h-screen flex flex-col items-center overflow-y-hidden justify-center bg-black relative"
+      className="max-w-screen min-h-screen flex flex-col items-center overflow-y-hidden overflow-hidden justify-center bg-black relative"
     >
       <HeroHeader.root className="justify-between">
         <nav className="text-white/60">
@@ -36,7 +38,7 @@
      
 
         </HeroHeader.root>
-        <section className="w-full grid grid-cols-5 gap-4 p-4 mt-24">
+        <section className="w-full grid grid-cols-5 gap-4 p-4 mt-24 bg-blue-500">
 
           <HeroSection.root>
             <HeroSection.text className="text-5xl">Henrique Barbosa</HeroSection.text>
@@ -140,21 +142,35 @@
               Quer um website profissional?
             </div>
 
+          {/** On hold !!!!  */}
+            <Contact.root className="pb-32">
+              <div className="p-4 w-full h-full flex flex-col items-center justify-center gap-8">
+                <h1 className="text-2xl text-zinc-600">Me mande um email ✉️</h1>
+                <Mail size={128} />
+                <Snippet symbol="" size="lg">retr0lbb@gmail.com</Snippet>
+              </div>
 
-            <div className="col-span-5 grid grid-cols-3 h-full p-5 gap-3 place-items-center">
-              <div className="bg-red-400 p-4 w-full h-full">
+              <div className="bg-red-400 p-4 w-full h-full flex flex-col items-center justify-center">
                 <Mail />
               </div>
-              <div className="bg-red-400 p-4 w-full h-full">
+              <div className="bg-red-400 p-4 w-full h-full flex flex-col items-center justify-center">
                 <Mail />
               </div>
-              <div className="bg-red-400 p-4 w-full h-full">
-                <Mail />
-              </div>
-            </div>
-            
+            </Contact.root>
 
         </section>
+
+        <footer className="w-screen h-36 bg-green-500 flex items-center justify-around">
+          <a>© 2024 Henrique Barbosa</a>
+
+          <div className="flex items-center justify-evenly">
+            <IconButton>
+
+            </IconButton>
+          </div>
+        </footer>
+
+        
       </div>
     );
   }
