@@ -3,14 +3,14 @@
   import Motion from "@/static/70574400-9e6a-11e9-8708-22d4bf4c3322.png"
   import HeroSection from "@/components/heroCard"
   import HeroHeader from "@/components/Header"
-  import { Switch } from "@nextui-org/react"
+  import { Switch, Snippet } from "@nextui-org/react"
   import { FaNodeJs, FaReact } from "react-icons/fa"
   import { SiArduino } from "react-icons/si"
-  import { LucideHome, Folder, User2, SunDim, Moon, Clapperboard, Joystick, Binary, Backpack } from "lucide-react"
+  import { LucideHome, Folder, User2, SunDim, Moon, Clapperboard, Joystick, Binary, Backpack, Mail } from "lucide-react"
   import { AboutCard } from "@/components/about/aboutCard"
   import { SiUdemy } from "react-icons/si";
   import NanoCard from "@/components/about/nano-card"
-  import { motion, AnimatePresence } from "framer-motion"
+
 
   export default function Home() {
 
@@ -27,14 +27,14 @@
           </ul>
         </nav>
 
-          <div>
-            <Switch 
-            size="lg"
-            color="default"
-              startContent={<Moon />}
-              endContent={<SunDim />}
-            />
-          </div>
+          <Switch 
+          size="lg"
+          color="default"
+            startContent={<Moon />}
+            endContent={<SunDim />}
+          />
+     
+
         </HeroHeader.root>
         <section className="w-full grid grid-cols-5 gap-4 p-4 mt-24">
 
@@ -134,6 +134,26 @@
                 </div>
               </NanoCard.body>
             </NanoCard.root>
+
+
+            <div id="about" className="col-span-5 text-7xl font-bold py-5 mt-10 mb-5 px-10">
+              Quer um website profissional?
+            </div>
+
+
+            <div className="col-span-5 grid grid-cols-3 h-full p-5 gap-3 place-items-center">
+              <div className="bg-red-400 p-4 w-full h-full">
+                <Mail />
+              </div>
+              <div className="bg-red-400 p-4 w-full h-full">
+                <Mail />
+              </div>
+              <div className="bg-red-400 p-4 w-full h-full">
+                <Mail />
+              </div>
+            </div>
+            
+
         </section>
       </div>
     );
