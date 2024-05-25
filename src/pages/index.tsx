@@ -4,7 +4,7 @@
   import HeroSection from "@/components/heroCard"
   import HeroHeader from "@/components/Header"
   import { Switch, Snippet } from "@nextui-org/react"
-  import { FaNodeJs, FaReact, FaGithub } from "react-icons/fa"
+  import { FaNodeJs, FaReact, FaGithub, FaWhatsapp } from "react-icons/fa"
   import { SiArduino } from "react-icons/si"
   import { LucideHome, Folder, User2, SunDim, Moon, Clapperboard, Joystick, Binary, Backpack, Mail, Github, Linkedin, Instagram, Twitter, X } from "lucide-react"
   import { AboutCard } from "@/components/about/aboutCard"
@@ -185,11 +185,13 @@
               <IconButton className="bg-transparent hover:bg-transparent border-none hover:scale-105 size-10">
                 <BsTwitterX />
               </IconButton>
+
+              <IconButton className="bg-transparent hover:bg-transparent border-none hover:scale-105 size-10">
+                <FaWhatsapp size={24} />
+              </IconButton>
             </div>
           </div>
         </footer>
-
-        
       </div>
     );
   }
