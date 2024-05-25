@@ -26,6 +26,11 @@ export const root: React.FC<rootProps> = ({...props}) => {
             amount: "all",
             once: true
         }}
+        transition={{
+            duration: 0.4,
+            ease: "easeInOut",
+            type: "tween"
+        }}
         ref={mainProjectRef} className={
             twMerge("w-full h-full min-h-72 bg-gradient-to-br group relative p-4 from-white/20 to-white/30 rounded-2xl transition-all overflow-hidden",
             props.className)

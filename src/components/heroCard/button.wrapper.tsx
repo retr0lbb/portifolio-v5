@@ -5,7 +5,7 @@ import { FaWhatsapp } from "react-icons/fa";
 export const ButtonWrapper: React.FC = () => {
     return(
         <div className="flex items-center gap-4 mt-4">
-            <IconButton>
+            <IconButton href="https://www.linkedin.com/in/retr0lbb/">
                 <Linkedin size={28} />
             </IconButton>
 

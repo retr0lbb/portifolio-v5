@@ -10,11 +10,11 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col gap-2">
             <p>Redes sociais:</p>
             <div className="flex items-center gap-3">
-              <IconButton className="bg-transparent hover:bg-transparent border-none hover:scale-105 size-10">
+              <IconButton href="https://github.com/retr0lbb" className="bg-transparent hover:bg-transparent border-none hover:scale-105 size-10">
                <Github />
               </IconButton>
 
-              <IconButton className="bg-transparent hover:bg-transparent border-none hover:scale-105 size-10">
+              <IconButton href="https://www.linkedin.com/in/retr0lbb/" className="bg-transparent hover:bg-transparent border-none hover:scale-105 size-10">
                 <Linkedin />
               </IconButton>
 
@@ -22,11 +22,11 @@ export const Footer: React.FC = () => {
                 <Mail />
               </IconButton>
 
-              <IconButton className="bg-transparent hover:bg-transparent border-none hover:scale-105 size-10">
+              <IconButton  className="bg-transparent hover:bg-transparent border-none hover:scale-105 size-10">
                 <Instagram />
               </IconButton>
 
-              <IconButton className="bg-transparent hover:bg-transparent border-none hover:scale-105 size-10">
+              <IconButton  className="bg-transparent hover:bg-transparent border-none hover:scale-105 size-10">
                 <BsTwitterX />
               </IconButton>
 
