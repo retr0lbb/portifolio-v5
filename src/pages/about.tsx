@@ -4,9 +4,13 @@ import { Backpack, Binary, Clapperboard, Joystick } from "lucide-react"
 import { FaNodeJs, FaReact } from "react-icons/fa"
 import { SiArduino, SiUdemy } from "react-icons/si"
 
-export const AboutPage: React.FC = () => {
+interface AboutProps{
+  id: string
+}
+
+export const AboutPage: React.FC<AboutProps> = ({id}) => {
     return(
-        <section className="w-full p-10 grid grid-cols-5 gap-5">
+        <section className="w-full p-10 grid grid-cols-5 gap-5" id={id}>
             <AboutCard />
             <NanoCard.root className="row-span-1">
               <NanoCard.title>Tecnologias</NanoCard.title>
