@@ -1,7 +1,8 @@
 import ProjectCard from "@/components/projects"
 import voteNow from "@/static/Home-black.png"
-import motion from "@/static/70574400-9e6a-11e9-8708-22d4bf4c3322.png"
+import motionProject from "@/static/70574400-9e6a-11e9-8708-22d4bf4c3322.png"
 import React from "react"
+import motion from "framer-motion"
 
 interface ProjectPageProps{
     id: string
@@ -29,7 +30,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     title="Framer Motion" 
                     description="lorem ipos odsiad  aodsio ewijk jhiuoisdak idjsaokldakd"
                 >
-                    <ProjectCard.image src={motion.src} />
+                    <ProjectCard.image src={motionProject.src} />
                 </ProjectCard.root>
             </section>
         </section>

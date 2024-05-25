@@ -1,18 +1,32 @@
-import React, {ComponentProps} from "react"
+import React, {ComponentProps, useRef} from "react"
 import { twMerge } from "tailwind-merge"
 import {Github, Linkedin, Globe} from "lucide-react"
 import { IconButton } from "../iconButton"
-import { BackgroundGradient } from "../ui/backgound-gradient"
+import {useScroll, motion} from "framer-motion"
 
 
 interface rootProps extends ComponentProps<"div">{
     description?: string
     title?: string
+    parentRef?: React.MutableRefObject<HTMLDivElement>
 }
 
 export const root: React.FC<rootProps> = ({...props}) => {
+    const mainProjectRef = useRef<HTMLDivElement>(null)
+
     return(
-        <div className={
+        <motion.div 
+        initial={{
+            opacity: 0
+        }}
+        whileInView={{
+            opacity: 1
+        }}
+        viewport={{
+            amount: "all",
+            once: true
+        }}
+        ref={mainProjectRef} className={
             twMerge("w-full h-full min-h-72 bg-gradient-to-br group relative p-4 from-white/20 to-white/30 rounded-2xl transition-all overflow-hidden",
             props.className)
         }>
@@ -40,6 +54,6 @@ export const root: React.FC<rootProps> = ({...props}) => {
                     </IconButton>
                 </div>
             </div>
-        </div>
+        </motion.div >
     )
 }
