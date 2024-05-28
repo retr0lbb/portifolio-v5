@@ -10,7 +10,7 @@ import { Footer } from "@/components/footer/footer"
 export default function Home() {
   return (
     <main id="home" 
-      className="scroll-smooth max-w-screen min-h-screen py-28 flex flex-col items-center overflow-y-hidden overflow-hidden bg-black relative"
+      className="scroll-smooth max-w-screen min-h-screen pb-32 flex flex-col items-center overflow-y-hidden overflow-hidden bg-black relative"
     >
       <HeroHeader.root className="justify-between">
         <nav className="text-white/60">
