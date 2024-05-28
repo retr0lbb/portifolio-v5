@@ -9,9 +9,10 @@ interface rootProps extends ComponentProps<"div">{
     description?: string
     title?: string
     parentRef?: React.MutableRefObject<HTMLDivElement>
+    buttons: React.ReactNode
 }
 
-export const root: React.FC<rootProps> = ({...props}) => {
+export const root: React.FC<rootProps> = ({buttons, ...props}) => {
 
     return(
         <motion.div 
@@ -29,19 +30,8 @@ export const root: React.FC<rootProps> = ({...props}) => {
                     <h1 className="text-4xl text-white/90 font-bold">{props.title}</h1>
                     <p className="text-white/70">{props.description}</p>
                 </div>
-                <div className="flex flex-row-reverse items-end gap-4 p-2">
-                    <IconButton >
-                        <Github />
-                    </IconButton>
 
-                    <IconButton >
-                        <Linkedin />
-                    </IconButton>
-
-                    <IconButton >
-                        <Globe />
-                    </IconButton>
-                </div>
+                {buttons}
             </div>
         </motion.div >
     )
