@@ -14,10 +14,10 @@ interface ProjectPageProps{
 
 export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
     return(
-        <motion.section 
+        <motion.main 
             initial={{
                 opacity: 0,
-                x: -200
+                x: -500
             }}
             whileInView={{
                 opacity: 1,
@@ -28,11 +28,10 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                 once: true
             }}
             className="w-full flex flex-col items-center justify-center p-10 gap-8" id={id}>
-            <motion.p
-                className="text-7xl font-bold font-mono w-full"
-            >
+
+            <p className="text-7xl font-bold font-mono w-full">
                 Veja a minha expêriencia:
-            </motion.p>
+            </p>
 
             <section
                 className="w-full grid grid-cols-5 gap-3 overflow-y-hidden"
@@ -61,10 +60,10 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     description="Uma aplicação de votação em enquetes simples e facil com integração com web sockets e redis database"
                     buttons={
                     <ProjectCard.links>
-                        <IconButton >
+                        <IconButton href="https://github.com/retr0lbb/Vote-now">
                             <Github />
                         </IconButton>
-                        <IconButton >
+                        <IconButton href="https://vote-now-flame.vercel.app">
                             <Globe />
                         </IconButton>
                     </ProjectCard.links>
@@ -109,6 +108,6 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     <ProjectCard.image src={BoomSneakers.src} />
                 </ProjectCard.root>
             </section>
-        </motion.section>
+        </motion.main>
     )
 }

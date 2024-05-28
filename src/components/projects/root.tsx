@@ -1,8 +1,5 @@
-import React, {ComponentProps, useRef} from "react"
+import React, {ComponentProps} from "react"
 import { twMerge } from "tailwind-merge"
-import {Github, Linkedin, Globe} from "lucide-react"
-import { IconButton } from "../iconButton"
-import {useScroll, motion} from "framer-motion"
 
 
 interface rootProps extends ComponentProps<"div">{
@@ -15,7 +12,7 @@ interface rootProps extends ComponentProps<"div">{
 export const root: React.FC<rootProps> = ({buttons, ...props}) => {
 
     return(
-        <motion.div 
+        <div 
             className={
             twMerge("w-full h-full min-h-72 bg-gradient-to-br group relative p-4 from-white/20 to-white/30 rounded-2xl transition-all overflow-hidden",
             props.className)
@@ -33,6 +30,6 @@ export const root: React.FC<rootProps> = ({buttons, ...props}) => {
 
                 {buttons}
             </div>
-        </motion.div >
+        </div >
     )
 }
