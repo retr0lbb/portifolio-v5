@@ -3,6 +3,7 @@ import NanoCard from "@/components/about/nano-card"
 import { Backpack, Binary, Clapperboard, Joystick } from "lucide-react"
 import { FaNodeJs, FaReact } from "react-icons/fa"
 import { SiArduino, SiUdemy } from "react-icons/si"
+import { motion } from "framer-motion"
 
 interface AboutProps{
   id: string
@@ -10,7 +11,23 @@ interface AboutProps{
 
 export const AboutPage: React.FC<AboutProps> = ({id}) => {
     return(
-        <section className="w-full p-10 grid grid-cols-5 gap-5" id={id}>
+      <motion.main 
+        className="flex flex-col gap-8 p-10"
+        initial={{
+          opacity: 0,
+          x: 500
+        }}
+        whileInView={{
+          opacity: 1,
+          x: 0
+        }}
+        viewport={{
+          once: true,
+          margin: "-200px"
+        }}
+      >
+        <h1 className="text-7xl font-bold font-mono w-full">Me conheça um pouco melhor:</h1>
+        <section className="w-full grid grid-cols-5 gap-5" id={id}>
             <AboutCard />
             <NanoCard.root className="row-span-1">
               <NanoCard.title>Tecnologias</NanoCard.title>
@@ -73,5 +90,6 @@ export const AboutPage: React.FC<AboutProps> = ({id}) => {
               </NanoCard.body>
             </NanoCard.root>
         </section>
+      </motion.main>
     )
 }

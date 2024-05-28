@@ -10,18 +10,21 @@ interface ProjectPageProps{
 
 export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
     return(
-        <section className="w-full flex flex-col items-center justify-center p-10 gap-8" id={id}>
+        <motion.section 
+            initial={{
+                opacity: 0,
+                x: -200
+            }}
+            whileInView={{
+                opacity: 1,
+                x: 0
+            }}
+            viewport={{
+                margin: "-300px",
+                once: true
+            }}
+            className="w-full flex flex-col items-center justify-center p-10 gap-8" id={id}>
             <motion.p
-                initial={{
-                    opacity: 0
-                }}
-                whileInView={{
-                    opacity: 1
-                }}
-                viewport={{
-                    amount: "all",
-                    once: true
-                }}
                 className="text-7xl font-bold font-mono w-full"
             >
                 Veja a minha experiencia:
@@ -50,6 +53,6 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     <ProjectCard.image src={motionProject.src} />
                 </ProjectCard.root>
             </section>
-        </section>
+        </motion.section>
     )
 }

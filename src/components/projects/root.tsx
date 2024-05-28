@@ -12,26 +12,10 @@ interface rootProps extends ComponentProps<"div">{
 }
 
 export const root: React.FC<rootProps> = ({...props}) => {
-    const mainProjectRef = useRef<HTMLDivElement>(null)
 
     return(
         <motion.div 
-        initial={{
-            opacity: 0
-        }}
-        whileInView={{
-            opacity: 1
-        }}
-        viewport={{
-            amount: "all",
-            once: true
-        }}
-        transition={{
-            duration: 0.4,
-            ease: "easeInOut",
-            type: "tween"
-        }}
-        ref={mainProjectRef} className={
+            className={
             twMerge("w-full h-full min-h-72 bg-gradient-to-br group relative p-4 from-white/20 to-white/30 rounded-2xl transition-all overflow-hidden",
             props.className)
         }>
