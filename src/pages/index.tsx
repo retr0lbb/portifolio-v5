@@ -7,13 +7,14 @@ import { AboutPage } from "./about"
 import ContactPage from "@/components/contact"
 import { Footer } from "@/components/footer/footer"
 import { ContactCardFront } from "@/components/ContactCard"
+import { Contact } from "./contact"
 
 
 
 export default function Home() {
   return (
     <main id="home" 
-      className="scroll-smooth max-w-screen min-h-screen pb-32 flex flex-col items-center overflow-y-hidden overflow-hidden bg-black relative"
+      className="scroll-smooth max-w-screen min-h-screen pb-32 flex flex-col items-center overflow-y-hidden overflow-hidden bg-black relative antialiased"
     >
       <HeroHeader.root className="justify-between">
         <nav className="text-white/60">
@@ -37,10 +38,7 @@ export default function Home() {
           <MainSection />
           <ProjectPage id="projects"/> 
           <AboutPage id="about"/>
-          <ContactPage.root>
-            <p className="mt-10 text-7xl font-bold font-mono mb-5">Contate-se comigo</p>
-            <ContactCardFront />
-          </ContactPage.root> 
+          <Contact id="contact" />
         {/* SECTIONS */}
 
         <Footer />
