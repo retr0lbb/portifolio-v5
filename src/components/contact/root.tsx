@@ -8,7 +8,7 @@ interface rootProps {
 
 export const root: React.FC<rootProps> = ({children, className}) => {
     return(
-        <div className={twMerge("col-span-5 grid grid-cols-3 h-full p-5 gap-3 place-items-center", className)}>
+        <div id="contact" className={twMerge("w-full flex items-center justify-center flex-col", className)}>
             {children}
         </div>
     )

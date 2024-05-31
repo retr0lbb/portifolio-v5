@@ -1,10 +1,13 @@
 import HeroHeader from "@/components/Header"
 import { Switch } from "@nextui-org/react"
-import { LucideHome, Folder, User2, SunDim, Moon } from "lucide-react"
+import { LucideHome, Folder, User2, SunDim, Moon, Phone } from "lucide-react"
 import { ProjectPage } from "./project"
 import { MainSection } from "./main"
 import { AboutPage } from "./about"
+import ContactPage from "@/components/contact"
 import { Footer } from "@/components/footer/footer"
+import { ContactCardFront } from "@/components/ContactCard"
+
 
 
 export default function Home() {
@@ -18,6 +21,7 @@ export default function Home() {
             <HeroHeader.link to="#home" Icon={LucideHome}>Home</HeroHeader.link>
             <HeroHeader.link to="#projects" Icon={Folder}>Projects</HeroHeader.link>
             <HeroHeader.link to="#about" Icon={User2}>Sobre mim</HeroHeader.link>
+            <HeroHeader.link to="#contact" Icon={Phone}>Contato</HeroHeader.link>
           </ul>
         </nav>
 
@@ -33,6 +37,10 @@ export default function Home() {
           <MainSection />
           <ProjectPage id="projects"/> 
           <AboutPage id="about"/>
+          <ContactPage.root>
+            <p className="mt-10 text-7xl font-bold font-mono mb-5">Contate-se comigo</p>
+            <ContactCardFront />
+          </ContactPage.root> 
         {/* SECTIONS */}
 
         <Footer />
