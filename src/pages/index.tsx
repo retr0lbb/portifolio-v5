@@ -4,9 +4,7 @@ import { LucideHome, Folder, User2, SunDim, Moon, Phone } from "lucide-react"
 import { ProjectPage } from "./project"
 import { MainSection } from "./main"
 import { AboutPage } from "./about"
-import ContactPage from "@/components/contact"
 import { Footer } from "@/components/footer/footer"
-import { ContactCardFront } from "@/components/ContactCard"
 import { Contact } from "./contact"
 
 
