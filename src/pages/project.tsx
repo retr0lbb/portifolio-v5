@@ -42,10 +42,10 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     description="Uma loja online de jogos digitais focada na distribuição de jogos nacionais"
                     buttons={
                     <ProjectCard.links>
-                        <IconButton href="https://github.com/retr0lbb/N.E.R.D">
+                        <IconButton isDarkmodeMandatory href="https://github.com/retr0lbb/N.E.R.D">
                             <Github />
                         </IconButton>
-                        <IconButton >
+                        <IconButton isDarkmodeMandatory>
                             <Globe />
                         </IconButton>
                     </ProjectCard.links>
@@ -60,10 +60,10 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     description="Uma aplicação de votação em enquetes simples e facil com integração com web sockets e redis database"
                     buttons={
                     <ProjectCard.links>
-                        <IconButton href="https://github.com/retr0lbb/Vote-now">
+                        <IconButton isDarkmodeMandatory href="https://github.com/retr0lbb/Vote-now">
                             <Github />
                         </IconButton>
-                        <IconButton href="https://vote-now-flame.vercel.app">
+                        <IconButton isDarkmodeMandatory href="https://vote-now-flame.vercel.app">
                             <Globe />
                         </IconButton>
                     </ProjectCard.links>
@@ -78,10 +78,10 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     description="lorem ipos odsiad  aodsio ewijk jhiuoisdak idjsaokldakd"
                     buttons={
                     <ProjectCard.links>
-                        <IconButton >
+                        <IconButton isDarkmodeMandatory >
                             <Github />
                         </IconButton>
-                        <IconButton >
+                        <IconButton isDarkmodeMandatory >
                             <Globe />
                         </IconButton>
                     </ProjectCard.links>
@@ -96,10 +96,10 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     description="Uma loja online de replicas de calçados do tipo sneakers por um preço justo e acessivel"
                     buttons={
                     <ProjectCard.links>
-                        <IconButton >
+                        <IconButton isDarkmodeMandatory>
                             <Github />
                         </IconButton>
-                        <IconButton href="https://boomsneakers.com">
+                        <IconButton isDarkmodeMandatory href="https://boomsneakers.com">
                             <Globe />
                         </IconButton>
                     </ProjectCard.links>

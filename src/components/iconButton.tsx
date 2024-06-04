@@ -2,15 +2,21 @@ import React from "react"
 import { twMerge } from "tailwind-merge"
 
 interface iconButtonProps extends React.ComponentProps<"button">{
-    href?: string;
+    href?: string
+    isDarkmodeMandatory?: boolean
 }
 
-export const IconButton: React.FC<iconButtonProps> = ({ href, className, ...props}) => {
+
+export const IconButton: React.FC<iconButtonProps> = ({isDarkmodeMandatory, href, className, ...props}) => {
     return(
         <a href={href} target="_blank">
-        <button className={
-            twMerge("size-14 bg-white/20 rounded-full text-white border hover:bg-white/30 border-white/10 grid place-items-center",
-            className)}
+        <button className={twMerge(
+                    "size-14 rounded-full border grid place-items-center",
+                    isDarkmodeMandatory
+                        ? "bg-background-ligth/20 text-background-ligth border-background-ligth/10 hover:bg-background-ligth/30"
+                        : "bg-background-dark/10 text-contrast-dark border-background-dark/10 hover:bg-background-dark/5 dark:bg-background-ligth/20 dark:text-background-ligth dark:hover:bg-background-ligth/30 dark:border-background-ligth/10",
+                    className
+                )}
             {...props}
         />
         </a>
