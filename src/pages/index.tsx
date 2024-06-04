@@ -23,14 +23,7 @@ export default function Home() {
             <HeroHeader.link to="#contact" Icon={Phone}>Contato</HeroHeader.link>
           </ul>
         </nav>
-
-          <Switch 
-          size="lg"
-          color="default"
-            startContent={<Moon />}
-            endContent={<SunDim />}
-          />
-
+        
           <ThemeSwap />
         </HeroHeader.root>
 
