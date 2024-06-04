@@ -23,13 +23,13 @@ export const MainSection: React.FC = () => {
                 <ChevronsDown size={32} color="gray"/>
             </motion.div>
             <div className="w-full">
-                <p className="text-9xl font-bold font-mono text-neutral-200">Henrique Barbosa <br /></p>
-                <div className="text-6xl font-bold text-neutral-600">
-                    <FlipWords words={words} /> Developer.
+                <p className="text-9xl font-bold font-mono text-zinc-900 dark:text-zinc-200">Henrique Barbosa <br /></p>
+                <div className="text-6xl font-bold dark:text-zinc-600">
+                    <FlipWords words={words} className="dark:text-zinc-200 text-zinc-600" /> Developer.
                 </div>
             </div>
 
-            <div className="w-full mt-8 border-t border-white/20 pt-5" >
+            <div className="w-full mt-8 border-t border-black/50 dark:border-white/20 pt-5" >
                 <div className="flex items-center gap-3">
                     <IconButton href="https://www.linkedin.com/in/retr0lbb/">
                         <Linkedin size={28} />

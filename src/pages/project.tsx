@@ -29,7 +29,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
             }}
             className="w-full flex flex-col items-center justify-center p-10 gap-8" id={id}>
 
-            <p className="text-7xl font-bold font-mono w-full">
+            <p className="text-7xl font-bold font-mono w-full dark:text-zinc-200 text-zinc-900">
                 Veja a minha expêriencia:
             </p>
 
@@ -51,7 +51,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     </ProjectCard.links>
                     }
                 >
-                    <ProjectCard.image width={720} height={480} alt="image" src={NERD.src} />
+                    <ProjectCard.image width={1080} height={720} alt="image" src={NERD.src} />
                 </ProjectCard.root>
 
                 <ProjectCard.root 
@@ -69,7 +69,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     </ProjectCard.links>
                     }
                 >
-                    <ProjectCard.image width={720} height={480} alt="image" src={voteNow.src} />
+                    <ProjectCard.image width={1080} height={720} alt="image" src={voteNow.src} />
                 </ProjectCard.root>
 
                 <ProjectCard.root 
@@ -87,7 +87,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     </ProjectCard.links>
                     }
                 >
-                    <ProjectCard.image width={720} height={480} alt="image" src={motionProject.src} />
+                    <ProjectCard.image width={1080} height={720} alt="image" src={motionProject.src} />
                 </ProjectCard.root>
 
                 <ProjectCard.root 
@@ -105,7 +105,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     </ProjectCard.links>
                     }
                 >
-                    <ProjectCard.image width={720} height={480} alt="image" src={BoomSneakers.src} />
+                    <ProjectCard.image width={1080} height={720} alt="image" src={BoomSneakers.src} />
                 </ProjectCard.root>
             </section>
         </motion.main>

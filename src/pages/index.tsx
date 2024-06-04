@@ -12,7 +12,7 @@ import { Contact } from "./contact"
 export default function Home() {
   return (
     <main id="home" 
-      className="scroll-smooth max-w-screen min-h-screen pb-32 flex flex-col items-center overflow-y-hidden overflow-hidden bg-black relative antialiased"
+      className="scroll-smooth max-w-screen min-h-screen pb-32 flex flex-col items-center overflow-y-hidden overflow-hidden dark:bg-black relative antialiased"
     >
       <HeroHeader.root className="justify-between">
         <nav className="text-white/60">
