@@ -6,6 +6,7 @@ import { MainSection } from "./main"
 import { AboutPage } from "./about"
 import { Footer } from "@/components/footer/footer"
 import { Contact } from "./contact"
+import { ThemeSwap } from "@/components/themeSwap"
 
 export default function Home() {
   return (
@@ -29,6 +30,8 @@ export default function Home() {
             startContent={<Moon />}
             endContent={<SunDim />}
           />
+
+          <ThemeSwap />
         </HeroHeader.root>
 
         {/* SECTIONS */}

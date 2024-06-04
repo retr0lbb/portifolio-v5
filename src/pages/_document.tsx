@@ -1,15 +1,15 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import {Providers} from "@/providers/nextUi.provider"
+import { Providers } from "@/providers/nextUi.provider"
 
 export default function Document() {
   return (
-    <Html className="p-0 m-0 box-border scroll-smooth" lang="en">
+    <Html suppressHydrationWarning className="p-0 m-0 box-border scroll-smooth" lang="en">
       <Head></Head>
-      <body className={"dark"}>
-        <Providers>
+      <body>
+          <Providers>
             <Main />
             <NextScript />
-        </Providers>
+          </Providers>
       </body>
     </Html>
   );
