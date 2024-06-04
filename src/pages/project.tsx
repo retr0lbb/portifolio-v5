@@ -29,7 +29,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
             }}
             className="w-full flex flex-col items-center justify-center p-10 gap-8" id={id}>
 
-            <p className="text-7xl font-bold font-mono w-full dark:text-zinc-200 text-zinc-900">
+            <p className="text-7xl font-bold font-mono w-full dark:text-zinc-200 text-zinc-800">
                 Veja a minha expêriencia:
             </p>
 

@@ -26,13 +26,13 @@ export const AboutPage: React.FC<AboutProps> = ({id}) => {
           margin: "-200px"
         }}
       >
-        <h1 className="text-7xl font-bold font-mono w-full">Me conheça um pouco melhor:</h1>
+        <h1 className="text-7xl font-bold font-mono w-full text-zinc-800 dark:text-zinc-200">Me conheça um pouco melhor:</h1>
         <section className="w-full grid grid-cols-5 gap-5" id={id}>
             <AboutCard />
             <NanoCard.root className="row-span-1">
               <NanoCard.title>Tecnologias</NanoCard.title>
               <NanoCard.body className="grid-cols-2 gap-2">
-                <div className="bg-black/30 rounded-md flex items-center justify-center">
+                <div className="bg-zinc-100 rounded-md flex items-center justify-center">
                   <FaReact size={64} color="cyan" />
                 </div>
 
