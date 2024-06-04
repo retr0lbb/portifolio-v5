@@ -1,5 +1,4 @@
 import { useState } from "react"
-import {setCookie, parseCookies} from "nookies"
 
 export interface darkModeProviderTypes{
     isDarkModed: boolean,
@@ -14,7 +13,6 @@ export function useDarkmode(){
             return !prev
         })
     }
-
 
     return {isDarkModed, toogleDarkmode}
 }

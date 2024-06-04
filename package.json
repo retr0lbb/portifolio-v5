@@ -12,12 +12,10 @@
     "@nextui-org/react": "^2.3.6",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.6",
-    "js-cookie": "^3.0.5",
     "lucide-react": "^0.378.0",
     "mini-svg-data-uri": "^1.4.4",
     "next": "14.2.3",
     "next-themes": "^0.3.0",
-    "nookies": "^2.5.2",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
@@ -25,7 +23,6 @@
     "tailwind-variants": "^0.2.1"
   },
   "devDependencies": {
-    "@types/js-cookie": "^3.0.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

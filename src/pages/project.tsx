@@ -51,7 +51,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     </ProjectCard.links>
                     }
                 >
-                    <ProjectCard.image src={NERD.src} />
+                    <ProjectCard.image width={720} height={480} alt="image" src={NERD.src} />
                 </ProjectCard.root>
 
                 <ProjectCard.root 
@@ -69,7 +69,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     </ProjectCard.links>
                     }
                 >
-                    <ProjectCard.image src={voteNow.src} />
+                    <ProjectCard.image width={720} height={480} alt="image" src={voteNow.src} />
                 </ProjectCard.root>
 
                 <ProjectCard.root 
@@ -87,7 +87,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     </ProjectCard.links>
                     }
                 >
-                    <ProjectCard.image src={motionProject.src} />
+                    <ProjectCard.image width={720} height={480} alt="image" src={motionProject.src} />
                 </ProjectCard.root>
 
                 <ProjectCard.root 
@@ -99,13 +99,13 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                         <IconButton >
                             <Github />
                         </IconButton>
-                        <IconButton >
+                        <IconButton href="https://boomsneakers.com">
                             <Globe />
                         </IconButton>
                     </ProjectCard.links>
                     }
                 >
-                    <ProjectCard.image src={BoomSneakers.src} />
+                    <ProjectCard.image width={720} height={480} alt="image" src={BoomSneakers.src} />
                 </ProjectCard.root>
             </section>
         </motion.main>
