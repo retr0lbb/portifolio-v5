@@ -9,7 +9,9 @@ interface ContactId {
 export const Contact: React.FC<ContactId> = ({id}) => {
     return(
         <main id={id} className="w-full flex flex-col p-10 gap-8">
-            <h1 className="text-7xl font-bold font-mono w-full">Se conecte-se comigo</h1>
+            <h1 className="text-7xl font-bold font-mono w-full text-background-dark dark:text-background-ligth">
+                Como falar comigo?
+            </h1>
             <div className="w-full flex px-5 gap-10 mt-3">
                 <ContactCard.root
                     initial={{
@@ -32,7 +34,7 @@ export const Contact: React.FC<ContactId> = ({id}) => {
                     <ContactCard.body />
                 </ContactCard.root>
 
-                <div className="flex flex-1 py-2 px-14 gap-5 flex-col items-center justify-center">
+                <div className="flex flex-1 py-2 px-14 gap-5 flex-col items-center justify-center text-background-ligth">
                     <p className="w-full text-4xl">Atividades recentes:</p>
                     <div className="rounded-2xl flex-1 w-full border-2 p-4 border-white/10">
                         <div>

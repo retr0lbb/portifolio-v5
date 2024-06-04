@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-import {nextui} from "@nextui-org/react"
+import { nextui } from "@nextui-org/react"
 
 const {
   default: flattenColorPalette
@@ -19,6 +19,18 @@ const config: Config = {
     extend: {
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
+      },
+      colors: {
+        background: {
+          ligth: "#D9D9D9",
+          dark: "#0D0D0D"
+        },
+
+        contrast: {
+          dark: "#262626",
+          light: "#A6A6A6"
+        }
+        
       },
       keyframes: {
         meteor: {

@@ -8,6 +8,6 @@ interface titleProps {
 
 export const title: React.FC<titleProps> = ({children, className}) => {
     return(
-        <h1 className={twMerge("text-3xl font-bold", className)}>{children}</h1>
+        <h1 className={twMerge("text-3xl font-bold dark:text-background-ligth", className)}>{children}</h1>
     )
 }
