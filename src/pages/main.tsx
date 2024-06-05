@@ -3,7 +3,7 @@ import {FlipWords} from "@/components/ui/flip-words"
 import { AtSign, Linkedin } from "lucide-react"
 import { FaWhatsapp } from "react-icons/fa"
 import { ChevronsDown } from "lucide-react"
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 
 export const MainSection: React.FC = () => {
     const words = ["Web", "Mobile", "Game"]
@@ -24,7 +24,7 @@ export const MainSection: React.FC = () => {
             </motion.div>
             <div className="w-full">
                 <p className="text-9xl font-bold font-mono text-background-dark dark:text-background-ligth">Henrique Barbosa <br /></p>
-                <div className="text-6xl font-bold dark:text-contrast-light">
+                <div className="text-6xl font-bold text-contrast-dark dark:text-contrast-light">
                     <FlipWords words={words} className="text-contrast-dark dark:text-background-ligth" /> Developer.
                 </div>
             </div>
@@ -47,8 +47,3 @@ export const MainSection: React.FC = () => {
         </div>
     )
 }
-
-
-/*
-    
- */

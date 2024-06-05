@@ -8,6 +8,8 @@ interface bodyProps {
 }
 export const body: React.FC<bodyProps> = ({children, className}) => {
     return(
-        <div className={twMerge("flex-1 grid grid-cols-4 grid-rows-2 p-2", className)} children={children} />
+        <div className={twMerge("flex-1 grid grid-cols-4 grid-rows-2 p-2", className)}>
+            {children}
+        </div>
     )
 }

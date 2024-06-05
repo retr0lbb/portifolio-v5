@@ -8,13 +8,25 @@
     box-sizing: border-box;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
+    width: .8em;
+    background-color: white;
+    background: rgb(227, 226, 226);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.242);
+    border-radius: 50px;
+}
+
+.dark ::-webkit-scrollbar{
     width: .8em;
     background-color: black;
     background: rgb(10, 10, 10);
 }
 
-::-webkit-scrollbar-thumb{
+.dark ::-webkit-scrollbar-thumb{
     background-color: rgba(255, 255, 255, 0.03);
     border-radius: 50px;
 }
+

@@ -6,7 +6,8 @@ interface rootProps extends React.ComponentProps<"div">{
 }
 export const root: React.FC<rootProps> = ({children, className, ...rest}) => {
     return(
-        <div className={twMerge("dark:bg-contrast-dark bg-contrast-light rounded-xl flex flex-col p-5 gap-3 shadow-xl hover:scale-[1.02] transition-all", className)} {...rest} >
+        <div className={twMerge(`dark:bg-contrast-dark dark:border-none bg-transparent text-contrast-dark border border-contrast-dark/20
+        rounded-xl flex flex-col p-5 gap-3 shadow-xl hover:scale-[1.02] transition-all`, className)} {...rest} >
             {children}
         </div>
     )
