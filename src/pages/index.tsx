@@ -1,12 +1,12 @@
 import HeroHeader from "@/components/Header"
-import { Switch } from "@nextui-org/react"
 import { LucideHome, Folder, User2, SunDim, Moon, Phone } from "lucide-react"
-import { ProjectPage } from "./project"
-import { MainSection } from "./main"
-import { AboutPage } from "./about"
+import { ProjectPage } from "../components/pages/project"
+import { MainSection } from "../components/pages/main"
+import { AboutPage } from "../components/pages/about"
 import { Footer } from "@/components/footer/footer"
-import { Contact } from "./contact"
+import { Contact } from "../components/pages/contact"
 import { ThemeSwap } from "@/components/themeSwap"
+import LanguageButton from "@/components/languageButton"
 
 export default function Home() {
   return (
@@ -23,8 +23,11 @@ export default function Home() {
             <HeroHeader.link to="#contact" Icon={Phone}>Contato</HeroHeader.link>
           </ul>
         </nav>
-        
-          <ThemeSwap />
+
+          <div className="flex items-center justify-center gap-5">
+            <LanguageButton />
+            <ThemeSwap />
+          </div>
         </HeroHeader.root>
 
         {/* SECTIONS */}
