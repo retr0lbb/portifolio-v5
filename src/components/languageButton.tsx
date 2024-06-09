@@ -1,13 +1,16 @@
 import React from "react";
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@nextui-org/react";
+import { LiaFlagUsaSolid } from "react-icons/lia";
+import { GiBrazilFlag } from "react-icons/gi";
+import { IconType } from "react-icons";
 
 // Definindo os tipos
 type Selection = string | Set<string>;
 
 export default function LanguageButton() {
   const [selectedKeys, setSelectedKeys] = React.useState<Set<string>>(new Set(["Linguagem"]));
+  const [selectedFlag, setSelectedFlag] = React.useState<IconType>()
 
-  // Função para lidar com a mudança de seleção, convertendo o tipo adequadamente
   const handleSelectionChange = (keys: Selection) => {
     if (typeof keys === "string") {
       setSelectedKeys(new Set([keys]));
@@ -24,7 +27,7 @@ export default function LanguageButton() {
   return (
     <Dropdown>
       <DropdownTrigger>
-        <Button variant="bordered" className="capitalize">
+        <Button variant="bordered" className="capitalize" startContent={selectedFlag as any}>
           {selectedValue}
         </Button>
       </DropdownTrigger>
@@ -38,8 +41,8 @@ export default function LanguageButton() {
             handleSelectionChange(keys as any)
         }}
       >
-        <DropdownItem key="Português">Português</DropdownItem>
-        <DropdownItem key="Inglês">Inglês</DropdownItem>
+        <DropdownItem startContent={<GiBrazilFlag />} onClick={() => setSelectedFlag(GiBrazilFlag)} key="Português">Português</DropdownItem>
+        <DropdownItem startContent={<LiaFlagUsaSolid />} onClick={() => setSelectedFlag(LiaFlagUsaSolid)} key="Inglês">Inglês</DropdownItem>
       </DropdownMenu>
     </Dropdown>
   );

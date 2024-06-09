@@ -4,9 +4,9 @@ import motionProject from "@/static/70574400-9e6a-11e9-8708-22d4bf4c3322.png"
 import NERD from "@/static/6e81f610234.png"
 import BoomSneakers from "@/static/Ned.jpeg"
 import React from "react"
-import { motion } from "framer-motion"
 import { IconButton } from "@/components/iconButton"
 import { Github, Globe } from "lucide-react"
+import Page from "@/components/sectionCreator"
 
 interface ProjectPageProps{
     id: string
@@ -14,7 +14,7 @@ interface ProjectPageProps{
 
 export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
     return(
-        <motion.main 
+        <Page.root
             initial={{
                 opacity: 0,
                 x: -500
@@ -27,11 +27,9 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                 margin: "-300px",
                 once: true
             }}
-            className="w-full flex flex-col items-center justify-center p-10 gap-8" id={id}>
+            className="gap-8" id={id}>
 
-            <p className="text-7xl font-bold font-mono w-full dark:text-background-ligth text-zinc-800">
-                Veja a minha expêriencia:
-            </p>
+            <Page.title>Veja a minha expêriencia:</Page.title>
 
             <section
                 className="w-full grid grid-cols-5 gap-3 overflow-y-hidden"
@@ -108,6 +106,6 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     <ProjectCard.image width={1080} height={720} alt="image" src={BoomSneakers.src} />
                 </ProjectCard.root>
             </section>
-        </motion.main>
+        </Page.root>
     )
 }

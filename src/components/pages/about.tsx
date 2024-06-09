@@ -3,7 +3,7 @@ import NanoCard from "@/components/about/nano-card"
 import { Backpack, Binary, Clapperboard, Joystick } from "lucide-react"
 import { FaNodeJs, FaReact } from "react-icons/fa"
 import { SiArduino, SiUdemy } from "react-icons/si"
-import { motion } from "framer-motion"
+import Page from "@/components/sectionCreator"
 
 interface AboutProps{
   id: string
@@ -11,7 +11,8 @@ interface AboutProps{
 
 export const AboutPage: React.FC<AboutProps> = ({id}) => {
     return(
-      <motion.main 
+      <Page.root 
+        id="about" 
         className="flex flex-col gap-8 p-10"
         initial={{
           opacity: 0,
@@ -26,10 +27,11 @@ export const AboutPage: React.FC<AboutProps> = ({id}) => {
           margin: "-200px"
         }}
       >
-        <h1 id={id} className="text-7xl font-bold font-mono w-full text-contrast-dark dark:text-background-ligth">Me conheça um pouco melhor:</h1>
-        <section className="w-full grid grid-cols-5 gap-5">
+
+        <Page.title>Me conheça um pouco melhor:</Page.title>
+        <section className="w-full grid grid-cols-1 place-content-center lg:grid-cols-5 gap-5">
             <AboutCard />
-            <NanoCard.root className="row-span-1">
+            <NanoCard.root className="row-span-1 w-full">
               <NanoCard.title>Tecnologias</NanoCard.title>
               <NanoCard.body className="grid-cols-2 gap-2">
                 <div className="dark:bg-background-dark/30 border border-contrast-light/30 dark:border-none bg-contrast-dark/5 rounded-md flex items-center justify-center">
@@ -89,6 +91,6 @@ export const AboutPage: React.FC<AboutProps> = ({id}) => {
               </NanoCard.body>
             </NanoCard.root>
         </section>
-      </motion.main>
+      </Page.root>
     )
 }

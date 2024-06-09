@@ -4,7 +4,6 @@ import { twMerge } from "tailwind-merge"
 interface rootProps extends ComponentProps<"div">{
     description?: string
     title?: string
-    parentRef?: React.MutableRefObject<HTMLDivElement>
     buttons: React.ReactNode
 }
 
