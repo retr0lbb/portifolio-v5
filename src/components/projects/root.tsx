@@ -11,7 +11,7 @@ export const root: React.FC<rootProps> = ({buttons, ...props}) => {
     return(
         <div 
             className={
-            twMerge("w-full h-full min-h-72 bg-gradient-to-br group relative p-4 from-white/20 to-white/30",
+            twMerge("w-full h-full min-h-52 lg:min-h-72 bg-gradient-to-br group relative p-4 from-white/20 to-white/30",
              "rounded-2xl transition-all overflow-hidden border border-black/10 dark:border-white/10",
             props.className)
         }>
@@ -23,8 +23,8 @@ export const root: React.FC<rootProps> = ({buttons, ...props}) => {
                 duration-75 -translate-x-full p-4 grid"
             >
                 <div>
-                    <h1 className="text-4xl text-white/90 font-bold">{props.title}</h1>
-                    <p className="text-white/70">{props.description}</p>
+                    <h1 className="text-2xl lg:text-4xl text-white/90 font-bold">{props.title}</h1>
+                    <p className="text-white/70 text-xs md:text-medium">{props.description}</p>
                 </div>
                 
                 {buttons}

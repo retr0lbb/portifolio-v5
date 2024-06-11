@@ -1,7 +1,8 @@
 import { link } from "./links"
-import {root} from "./root"
+import {mobileRoot, root} from "./root"
 
 export default {
     root,
-    link
+    link,
+    mobileRoot
 }

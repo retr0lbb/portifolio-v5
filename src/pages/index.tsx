@@ -14,9 +14,9 @@ export default function Home() {
       className="scroll-smooth max-w-screen min-h-screen pb-32 flex flex-col items-center 
       overflow-y-hidden overflow-hidden dark:bg-background-dark relative antialiased"
     >
-      <HeroHeader.root className="justify-between">
+      <HeroHeader.mobileRoot className="justify-between">
         <nav className="text-white/60">
-          <ul className="flex items-center justify-evenly gap-4 text-xl">
+          <ul className="flex flex-col items-center justify-evenly gap-5 text-xl">
             <HeroHeader.link to="#home" Icon={LucideHome}>Home</HeroHeader.link>
             <HeroHeader.link to="#projects" Icon={Folder}>Projects</HeroHeader.link>
             <HeroHeader.link to="#about" Icon={User2}>Sobre mim</HeroHeader.link>
@@ -28,7 +28,7 @@ export default function Home() {
             <LanguageButton />
             <ThemeSwap />
           </div>
-        </HeroHeader.root>
+        </HeroHeader.mobileRoot>
 
         {/* SECTIONS */}
           <MainSection />
