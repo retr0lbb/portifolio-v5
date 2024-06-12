@@ -7,6 +7,11 @@ const nextConfig = {
         protocol: "https",
         hostname: "github.com",
         pathname: "/retr0lbb.png"
+      },
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+        pathname: "/u/**"
       }
     ]
   }

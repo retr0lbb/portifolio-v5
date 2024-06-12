@@ -1,58 +1,24 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import axios from "axios"
-import { isNullOrUndefined } from "util";
+import { Octokit } from "octokit"
 
 export default async function handler(request: NextApiRequest, reply: NextApiResponse){
-    const url = "https://api.github.com/users/retr0lbb/repos"
     const token = process.env.GITHUB_API_KEY
 
+    const octokit = new Octokit({
+        auth: token
+    })
 
-    interface repoMainProps {
-        name: string,
+
+    const result = await octokit.request("GET /users/{username}/repos", {
+        username: "retr0lbb",
+        sort: "updated",
+        per_page: 1
+    })
+
+    if(result.data.length <= 0){
+        return reply.status(404).send({message: "no repos found"})
     }
 
-    async function getRepos(url:string): Promise<repoMainProps[]>{
-        const response = await axios.get(url, {
-            headers: {
-                'Authorization': `token ${token}`,
-                'Accept': 'application/vnd.github.v3+json'
-            }
-        })
-        return response.data
-    }
 
-    async function getLatestCommit(repo: string): Promise<any>{
-        const url = `/repos/retr0lbb/${repo}/commits`;
-        const response = await axios.get(url, {
-            headers: {
-                'Authorization': `token ${token}`,
-                'Accept': 'application/vnd.github.v3+json'
-            }
-        });
-
-        const commits = response.data
-        return commits.length > 0 ? commits[0]: null;
-    }
-
-    try {
-        const repos = await getRepos(url)
-
-        if(repos.length === 0){
-            return reply.status(404).json({ message: 'Nenhum repositório encontrado.' });
-        }
-
-        let mostRecentCommit: any = null
-        let mostRecentRepo: string | null = null
-
-        for(const repo in repos){
-            console.log()
-        }
-        
-    } catch (error) {
-        
-    }
-    
-
-
-    //return reply.send({data})
+    return reply.status(200).send({message: "serach done sucessfull", data: result.data})
 }
