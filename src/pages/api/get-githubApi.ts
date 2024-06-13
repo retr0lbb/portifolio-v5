@@ -12,7 +12,7 @@ export default async function handler(request: NextApiRequest, reply: NextApiRes
     const result = await octokit.request("GET /users/{username}/repos", {
         username: "retr0lbb",
         sort: "updated",
-        per_page: 1
+        per_page: 3,
     })
 
     if(result.data.length <= 0){

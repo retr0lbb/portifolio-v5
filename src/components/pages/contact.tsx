@@ -34,9 +34,7 @@ export const Contact: React.FC<ContactId> = ({id}) => {
                     <ContactCard.body />
                 </ContactCard.root>
 
-                <LastActivity.root>
-                    <LastActivity.repo imageSrc="https://avatars.githubusercontent.com/u/85702153?v=4" repoName="PortifolioV5" repoOwner="retr0lbb" repoUpdatedAt="now"/>
-                </LastActivity.root>
+                <LastActivity.builder />
             </div>
         </main>
     )
