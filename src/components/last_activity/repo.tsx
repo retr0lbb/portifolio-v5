@@ -13,7 +13,7 @@ export interface repoProps {
     }
 }
 
-export const repo: React.FC<repoProps> = ({properties}) => {
+export const Repo: React.FC<repoProps> = ({properties}) => {
 
     const repoDate = new Date(properties.repoUpdatedAt)
     return(

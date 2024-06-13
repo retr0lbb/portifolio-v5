@@ -2,7 +2,7 @@ interface rootProps {
     children?: React.ReactNode
 }
 
-export const root: React.FC<rootProps> = ({children}) => {
+export const Root: React.FC<rootProps> = ({children}) => {
     return(
         <div className="flex flex-1 py-2 px-14 gap-5 flex-col items-center justify-center text-contrast-dark dark:text-background-ligth">
             <p className="w-full text-4xl">Atividades recentes:</p>

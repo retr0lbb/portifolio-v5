@@ -3,10 +3,11 @@ import SOMETHING from "@/static/placeholder.jpeg"
 import LastActivity from "../last_activity"
 
 interface ContactId {
-    id: string
+    id: string,
+    repo: any[]
 }
 
-export const Contact: React.FC<ContactId> = ({id}) => {
+export const Contact: React.FC<ContactId> = ({id, repo}) => {
     return(
         <main id={id} className="w-full flex flex-col p-10 gap-8">
             <h1 className="text-7xl font-bold font-mono w-full text-background-dark dark:text-background-ligth">
@@ -34,7 +35,7 @@ export const Contact: React.FC<ContactId> = ({id}) => {
                     <ContactCard.body />
                 </ContactCard.root>
 
-                <LastActivity.builder />
+                <LastActivity repo={repo}/>
             </div>
         </main>
     )
