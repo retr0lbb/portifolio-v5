@@ -21,7 +21,7 @@ function LatestAcivity({repo}: {repo: any[]}){
         <Root key={1}>
             {
                 repo.map((item: RepoDataProps, index: number)=> (
-                    <Repo properties={{
+                    <Repo key={index} properties={{
                         key: String(index + 1),
                         imageSrc: item.owner.avatar_url,
                         linkToRepo: item.html_url,

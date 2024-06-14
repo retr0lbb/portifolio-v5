@@ -49,7 +49,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     </ProjectCard.links>
                     }
                 >
-                    <ProjectCard.image loading="lazy" placeholder="blur" fill alt="image" src={NERD} />
+                    <ProjectCard.image loading="lazy" placeholder="blur" fill alt="Computer in angled position showing an happy nerd emoji on center of a purple background" src={NERD} />
                 </ProjectCard.root>
 
                 <ProjectCard.root 
@@ -85,7 +85,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     </ProjectCard.links>
                     }
                 >
-                    <ProjectCard.image loading="lazy" placeholder="blur" fill alt="placeHolder" src={motionProject} />
+                    <ProjectCard.image loading="lazy" placeholder="blur" fill alt="just a placeholder image to an un existing project" src={motionProject} />
                 </ProjectCard.root>
 
                 <ProjectCard.root 
@@ -103,7 +103,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     </ProjectCard.links>
                     }
                 >
-                    <ProjectCard.image loading="lazy" placeholder="blur" fill alt="image" src={BoomSneakers} />
+                    <ProjectCard.image loading="lazy" placeholder="blur" fill alt="colorfull orange backgound with a shoees on the center and a logo named boomsneakers" src={BoomSneakers} />
                 </ProjectCard.root>
             </section>
         </Page.root>

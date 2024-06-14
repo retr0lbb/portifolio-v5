@@ -1,15 +1,18 @@
-import {root as Root} from "./root"
-import {link as Link} from "./links"
+import { root as Root } from "./root"
+import { link as Link } from "./links"
 import { Folder, LucideHome, Phone, User2 } from "lucide-react"
 import LanguageButton from "../languageButton"
 import { ThemeSwap } from "../themeSwap"
 import { IoMenu, IoClose } from "react-icons/io5";
-
 import { useState } from "react"
 import { motion } from "framer-motion"
 
-export const build: React.FC = () => {
-    const [isTapped, setIsTapped] = useState(false)
+
+
+
+export const Build: React.FC = () => {
+  const [isTapped, setIsTapped] = useState(false)
+
     return(
     <Root className="justify-between">
         <nav className="text-white/60">
