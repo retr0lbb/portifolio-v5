@@ -49,7 +49,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     </ProjectCard.links>
                     }
                 >
-                    <ProjectCard.image loading="lazy" placeholder="blur" fill alt="Computer in angled position showing an happy nerd emoji on center of a purple background" src={NERD} />
+                    <ProjectCard.image loading="lazy" placeholder="blur" alt="Computer in angled position showing an happy nerd emoji on center of a purple background" src={NERD} />
                 </ProjectCard.root>
 
                 <ProjectCard.root 
@@ -67,7 +67,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     </ProjectCard.links>
                     }
                 >
-                    <ProjectCard.image loading="lazy" placeholder="blur" fill alt="white rectangle on 16 x 9 ratio write Vote now on the middle of the rectangle" src={voteNow} />
+                    <ProjectCard.image loading="lazy" placeholder="blur" alt="white rectangle on 16 x 9 ratio write Vote now on the middle of the rectangle" src={voteNow} />
                 </ProjectCard.root>
 
                 <ProjectCard.root 
@@ -85,7 +85,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     </ProjectCard.links>
                     }
                 >
-                    <ProjectCard.image loading="lazy" placeholder="blur" fill alt="just a placeholder image to an un existing project" src={motionProject} />
+                    <ProjectCard.image loading="lazy" placeholder="blur" alt="just a placeholder image to an un existing project" src={motionProject} />
                 </ProjectCard.root>
 
                 <ProjectCard.root 
@@ -103,7 +103,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     </ProjectCard.links>
                     }
                 >
-                    <ProjectCard.image loading="lazy" placeholder="blur" fill alt="colorfull orange backgound with a shoees on the center and a logo named boomsneakers" src={BoomSneakers} />
+                    <ProjectCard.image loading="lazy" placeholder="blur" alt="colorfull orange backgound with a shoees on the center and a logo named boomsneakers" src={BoomSneakers} />
                 </ProjectCard.root>
             </section>
         </Page.root>

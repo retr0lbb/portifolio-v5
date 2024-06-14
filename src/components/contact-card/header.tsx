@@ -3,7 +3,8 @@ import Image from "next/image"
 interface headerProps {
     title: string,
     subtitle: string,
-    imgSrc: string
+    imgSrc: any,
+    imageAlt: string
 }
 
 export const header: React.FC<headerProps> = ({imgSrc, subtitle, title}) => {

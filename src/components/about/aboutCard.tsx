@@ -1,17 +1,12 @@
-import { Card, Image } from "@nextui-org/react";
-import placeHolder from "@/static/placeholder.jpeg"
+import { Card } from "@nextui-org/react";
 
 
 export const AboutCard: React.FC = () => {
     return(
         <Card
             radius="lg"
-            className="border-none row-span-2 col-span-2"
+            className="border-none row-span-2 col-span-2 bg-red-400"
         >
-            <Image 
-              alt="beautiful man looking down"
-              src={placeHolder.src}
-            />
         </Card>
     )
 }
