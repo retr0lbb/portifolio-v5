@@ -10,7 +10,7 @@ interface ContactId {
 export const Contact: React.FC<ContactId> = ({id, repo}) => {
     return(
         <main id={id} className="w-full flex flex-col p-10 gap-8">
-            <h1 className="text-7xl font-bold font-mono w-full text-background-dark dark:text-background-ligth">
+            <h1 className="text-7xl font-bold w-full text-background-dark dark:text-background-ligth">
                 Como falar comigo?
             </h1>
             <div className="w-full flex px-5 gap-10 mt-3">

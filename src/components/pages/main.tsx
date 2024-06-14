@@ -23,7 +23,7 @@ export const MainSection: React.FC = () => {
                 <ChevronsDown size={32} color="gray"/>
             </motion.div>
             <div className="w-full">
-                <p className="text-4xl md:text-6xl lg:text-9xl font-bold font-mono text-background-dark dark:text-background-ligth">Henrique Barbosa <br /></p>
+                <p className="text-4xl md:text-6xl lg:text-9xl font-bold text-background-dark dark:text-background-ligth">Henrique Barbosa <br /></p>
                 <div className="text-2xl md:text-5xl lg:text-7xl font-bold text-contrast-dark dark:text-contrast-light">
                     <FlipWords words={words} className="text-contrast-dark dark:text-background-ligth text-start p-0" /> Developer.
                 </div>
