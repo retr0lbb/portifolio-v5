@@ -9,7 +9,8 @@ export interface repoProps {
         imageSrc: string,
         repoDesc: string,
         repoLanguage: string,
-        linkToRepo: string
+        linkToRepo: string,
+        key: string
     }
 }
 
@@ -17,7 +18,7 @@ export const Repo: React.FC<repoProps> = ({properties}) => {
 
     const repoDate = new Date(properties.repoUpdatedAt)
     return(
-        <div className="border border-contrast-dark/40 dark:border-contrast-light/10 p-5">
+        <div key={properties.key} id={properties.key} className="border border-contrast-dark/40 dark:border-contrast-light/10 p-5">
             <div className="flex items-center gap-3">
                 <div className="flex items-center gap-1 text-contrast-light">
                     <Image width={100} height={100} className="size-6 mr-1 rounded-full border border-contrast-light/40 object-cover"  alt="some image" src={properties.imageSrc} />

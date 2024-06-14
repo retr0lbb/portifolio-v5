@@ -1,7 +1,5 @@
-import { Octokit } from "octokit"
-import {Repo, repoProps} from "./repo"
+import {Repo} from "./repo"
 import {Root } from "./root"
-import { GetServerSideProps } from "next"
 
 interface RepoDataProps {
     updated_at: string,
@@ -15,17 +13,16 @@ interface RepoDataProps {
 }
 
 function LatestAcivity({repo}: {repo: any[]}){
-
     if(!repo){
         return
     }
 
     return(
-        <Root>
-
+        <Root key={1}>
             {
                 repo.map((item: RepoDataProps, index: number)=> (
                     <Repo properties={{
+                        key: String(index + 1),
                         imageSrc: item.owner.avatar_url,
                         linkToRepo: item.html_url,
                         repoDesc: item.description ?? "",
