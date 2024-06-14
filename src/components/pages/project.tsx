@@ -1,6 +1,6 @@
 import ProjectCard from "@/components/projects"
 import voteNow from "@/static/Home-white.png"
-import motionProject from "@/static/70574400-9e6a-11e9-8708-22d4bf4c3322.png"
+import portFoil from "@/static/port.png"
 import NERD from "@/static/6e81f610234.png"
 import BoomSneakers from "@/static/Ned.jpeg"
 import React from "react"
@@ -40,12 +40,8 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     description="Uma loja online de jogos digitais focada na distribuição de jogos nacionais"
                     buttons={
                     <ProjectCard.links>
-                        <IconButton isDarkmodeMandatory href="https://github.com/retr0lbb/N.E.R.D">
-                            <Github />
-                        </IconButton>
-                        <IconButton isDarkmodeMandatory>
-                            <Globe />
-                        </IconButton>
+                        <IconButton Icon={Github} isDarkmodeMandatory href="https://github.com/retr0lbb/N.E.R.D" />
+                        <IconButton Icon={Globe} isDarkmodeMandatory />
                     </ProjectCard.links>
                     }
                 >
@@ -58,12 +54,8 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     description="Uma aplicação de votação em enquetes simples e facil com integração com web sockets e redis database"
                     buttons={
                     <ProjectCard.links>
-                        <IconButton isDarkmodeMandatory href="https://github.com/retr0lbb/Vote-now">
-                            <Github />
-                        </IconButton>
-                        <IconButton isDarkmodeMandatory href="https://vote-now-flame.vercel.app">
-                            <Globe />
-                        </IconButton>
+                        <IconButton Icon={Github} isDarkmodeMandatory href="https://github.com/retr0lbb/Vote-now" />
+                        <IconButton Icon={Globe} isDarkmodeMandatory href="https://vote-now-flame.vercel.app"/>
                     </ProjectCard.links>
                     }
                 >
@@ -72,20 +64,16 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
 
                 <ProjectCard.root 
                     className="lg:col-span-2" 
-                    title="Framer Motion" 
-                    description="lorem ipos odsiad  aodsio ewijk jhiuoisdak idjsaokldakd"
+                    title="Portifolio v5" 
+                    description="Projeto de portifolio que ultilza o next js para criar uma pagina eficiente que otimiza o SEO da pagina"
                     buttons={
                     <ProjectCard.links>
-                        <IconButton isDarkmodeMandatory >
-                            <Github />
-                        </IconButton>
-                        <IconButton isDarkmodeMandatory >
-                            <Globe />
-                        </IconButton>
+                        <IconButton isDarkmodeMandatory Icon={Github} />
+                        <IconButton isDarkmodeMandatory Icon={Globe} />
                     </ProjectCard.links>
                     }
                 >
-                    <ProjectCard.image loading="lazy" placeholder="blur" alt="just a placeholder image to an un existing project" src={motionProject} />
+                    <ProjectCard.image loading="lazy" placeholder="blur" alt="just a placeholder image to an un existing project" src={portFoil} />
                 </ProjectCard.root>
 
                 <ProjectCard.root 
@@ -94,12 +82,8 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     description="Uma loja online de replicas de calçados do tipo sneakers por um preço justo e acessivel"
                     buttons={
                     <ProjectCard.links>
-                        <IconButton isDarkmodeMandatory>
-                            <Github />
-                        </IconButton>
-                        <IconButton isDarkmodeMandatory href="https://boomsneakers.com">
-                            <Globe />
-                        </IconButton>
+                        <IconButton isDarkmodeMandatory Icon={Github} />
+                        <IconButton isDarkmodeMandatory href="https://boomsneakers.com" Icon={Globe} />
                     </ProjectCard.links>
                     }
                 >

@@ -24,11 +24,11 @@ export const root: React.FC<rootProps> = ({buttons, ...props}) => {
             >
                 <div>
                     <h1 className="text-2xl lg:text-4xl text-white/90 font-bold">{props.title}</h1>
-                    <p className="text-white/70 text-xs md:text-medium">{props.description}</p>
+                    <p className="mt-2 text-white/70 text-xs md:text-medium">{props.description}</p>
                 </div>
                 
                 {buttons}
             </div>
-        </div >
+        </div>
     )
 }
