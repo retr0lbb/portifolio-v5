@@ -35,8 +35,8 @@ export const MainSection: React.FC = () => {
                         <FaLinkedinIn/>
                     </IconButton>
 
-                    <IconButton>
-                        <FaWhatsapp/>
+                    <IconButton href="https://api.whatsapp.com/send?phone=5511999429345&text=Olá">
+                        <FaWhatsapp />
                     </IconButton>
 
                     <IconButton>
