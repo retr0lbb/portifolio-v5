@@ -16,7 +16,7 @@ export const AboutPage: React.FC<AboutProps> = ({id}) => {
         className="flex flex-col gap-8 p-10"
         initial={{
           opacity: 0,
-          x: 500
+          x: 20
         }}
         whileInView={{
           opacity: 1,

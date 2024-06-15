@@ -17,20 +17,20 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
         <Page.root
             initial={{
                 opacity: 0,
-                x: -500
+                x: -20
             }}
             whileInView={{
                 opacity: 1,
                 x: 0
             }}
             viewport={{
-                margin: "-300px",
-                once: true
+                once: true,
+                margin: "-200px"
             }}
-            className="gap-8" id={id}>
+            className="gap-8 relative" id={id}>
 
             <Page.title>Veja a minha expêriencia:</Page.title>
-
+            <div className="absolute -left-2 size-3 bg-red-700"></div>
             <section
                 className="w-full grid grid-cols-1 lg:grid-cols-5 place-items-center gap-8 lg:gap-3 overflow-y-hidden"
             >

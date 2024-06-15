@@ -1,6 +1,7 @@
 import ContactCard from "@/components/contact-card"
 import SOMETHING from "@/static/Ned.jpeg"
 import LastActivity from "../last_activity"
+import Page from "@/components/sectionCreator"
 
 interface ContactId {
     id: string,
@@ -9,26 +10,23 @@ interface ContactId {
 
 export const Contact: React.FC<ContactId> = ({id, repo}) => {
     return(
-        <main id={id} className="w-full flex flex-col p-10 gap-8">
-            <h1 className="text-7xl font-bold w-full text-background-dark dark:text-background-ligth">
-                Como falar comigo?
-            </h1>
-            <div className="w-full flex px-5 gap-10 mt-3">
+            <Page.root className="" id="">
+                <Page.title>
+                    Como falar comigo?
+                </Page.title>
+            <div className="w-full flex flex-col lg:flex-row px-5 gap-10 mt-10">
                 <ContactCard.root
                     initial={{
                         y: -500,
                         opacity: 0,
-                        scale: 0
                     }}
-
                     whileInView={{
                         y: 0,
                         opacity: 1,
-                        scale: 1
                     }}
                     viewport={{
                         once: true,
-                        margin: "-100px"
+                        margin: "-200px"
                     }}
                 className="">
                     <ContactCard.header imageAlt="beautiful person centered on the middle" imgSrc={SOMETHING} subtitle="Web developer" title="Henrique Barbosa"/>
@@ -37,6 +35,6 @@ export const Contact: React.FC<ContactId> = ({id, repo}) => {
 
                 <LastActivity repo={repo}/>
             </div>
-        </main>
+            </Page.root>
     )
 }
