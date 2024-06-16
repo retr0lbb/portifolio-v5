@@ -3,13 +3,14 @@ import "@/styles/glassy.css"
 import type { AppProps } from "next/app";
 import { Providers as ThemeProvider } from "@/providers/theme.provider"
 import { Providers } from "@/providers/nextUi.provider"
-import { Rubik } from "next/font/google"
+import { Poppins } from "next/font/google"
 
 
-const rubick = Rubik({
+const rubick = Poppins({
   subsets: ["latin"],
   weight: ["400", "700"],
-  display: "swap"
+  display: "auto",
+  preload: true
 })
 
 export default function App({ Component, pageProps }: AppProps) {
