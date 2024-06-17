@@ -27,10 +27,9 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                 once: true,
                 margin: "-200px"
             }}
-            className="gap-8 relative" id={id}>
+            className="gap-8" id={id}>
 
             <Page.title>Veja a minha expêriencia:</Page.title>
-            <div className="absolute -left-2 size-3 bg-red-700"></div>
             <section
                 className="w-full grid grid-cols-1 lg:grid-cols-5 place-items-center gap-8 lg:gap-3 overflow-y-hidden"
             >
