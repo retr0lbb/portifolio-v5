@@ -10,7 +10,7 @@ interface ContactId {
 
 export const Contact: React.FC<ContactId> = ({id, repo}) => {
     return(
-            <Page.root className="" id="">
+            <Page.root className="" id="contact">
                 <Page.title>
                     Como falar comigo?
                 </Page.title>
@@ -35,6 +35,6 @@ export const Contact: React.FC<ContactId> = ({id, repo}) => {
 
                 <LastActivity repo={repo}/>
             </div>
-            </Page.root>
+        </Page.root>
     )
 }

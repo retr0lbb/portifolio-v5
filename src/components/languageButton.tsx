@@ -4,12 +4,11 @@ import { LiaFlagUsaSolid } from "react-icons/lia";
 import { GiBrazilFlag } from "react-icons/gi";
 import { IconType } from "react-icons";
 
-// Definindo os tipos
 type Selection = string | Set<string>;
 
 export default function LanguageButton() {
-  const [selectedKeys, setSelectedKeys] = React.useState<Set<string>>(new Set(["Linguagem"]));
-  const [selectedFlag, setSelectedFlag] = React.useState<IconType>()
+  const [selectedKeys, setSelectedKeys] = React.useState<Set<string>>(new Set(["Português"]));
+  const [selectedFlag, setSelectedFlag] = React.useState<IconType>(GiBrazilFlag)
 
   const handleSelectionChange = (keys: Selection) => {
     if (typeof keys === "string") {
@@ -25,20 +24,20 @@ export default function LanguageButton() {
   );
 
   return (
-    <Dropdown>
+    <Dropdown size="sm">
       <DropdownTrigger>
-        <Button variant="bordered" className="capitalize" startContent={selectedFlag as any}>
+        <Button variant="flat" size="sm"  className="capitalize" startContent={selectedFlag as any}>
           {selectedValue}
         </Button>
       </DropdownTrigger>
       <DropdownMenu
         aria-label="Single selection example"
-        variant="flat"
         disallowEmptySelection
         selectionMode="single"
         selectedKeys={selectedKeys}
         onSelectionChange={(keys) => {
             handleSelectionChange(keys as any)
+            console.log(keys)
         }}
       >
         <DropdownItem startContent={<GiBrazilFlag />} onClick={() => setSelectedFlag(GiBrazilFlag)} key="Português">Português</DropdownItem>

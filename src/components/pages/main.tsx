@@ -39,7 +39,7 @@ export const MainSection: React.FC = () => {
                         <FaWhatsapp />
                     </IconButton>
 
-                    <IconButton>
+                    <IconButton href={`mailto:${"retr0lbb@gmail.com"}?subject=${encodeURIComponent("Website")}`}>
                         <FaEnvelope/>
                     </IconButton>
                 </div>

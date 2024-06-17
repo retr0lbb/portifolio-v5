@@ -11,13 +11,3 @@ export const root: React.FC<rootProps> = ({className, children, ...rest}) => {
         </header>
     )
 }
-
-export const mobileRoot: React.FC<rootProps> = ({children}) => {
-    return(
-        <header
-          className="fixed w-screen z-50 top-0 max-h-16 flex items-center justify-around bg-red-700 py-4"
-        >
-            {children}
-        </header>
-    )
-}

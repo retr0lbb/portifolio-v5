@@ -25,7 +25,7 @@ export const Build: React.FC = () => {
             {isTapped? (<IoClose />): (<IoMenu />)}
           </motion.div>
           <ul 
-          className={`absolute flex flex-col gap-5 py-10 border bg-contrast-light dark:bg-contrast-dark border-contrast-light/40 rounded-lg px-10 items-baseline left-0 top-16 transition-all ${isTapped? "translate-x-0" :"-translate-x-72"} md:dark:bg-transparent md:translate-x-0 md:border-none md:flex md:flex-row md:static md:items-center justify-evenly md:gap-4 md:px-0 md:py-0 text-xl`}>
+          className={`absolute flex flex-col gap-5 py-10 border bg-contrast-light md:bg-transparent dark:bg-contrast-dark border-contrast-light/40 rounded-lg px-10 items-baseline left-0 top-16 transition-all ${isTapped? "translate-x-0" :"-translate-x-72"} md:dark:bg-transparent md:translate-x-0 md:border-none md:flex md:flex-row md:static md:items-center justify-evenly md:gap-4 md:px-0 md:py-0 text-xl`}>
             <Link to="#home" onClick={() => setIsTapped(false)} Icon={LucideHome}>Home</Link>
             <Link to="#projects" onClick={() => setIsTapped(false)} Icon={Folder}>Projects</Link>
             <Link to="#about" onClick={() => setIsTapped(false)} Icon={User2}>Sobre mim</Link>
