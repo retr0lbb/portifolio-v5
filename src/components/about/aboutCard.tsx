@@ -1,12 +1,8 @@
-import { Card } from "@nextui-org/react";
-
+import Image from "next/image"
+import Memez from "@/static/Memez.png"
 
 export const AboutCard: React.FC = () => {
     return(
-        <Card
-            radius="lg"
-            className="border-none row-span-2 col-span-2 bg-red-400"
-        >
-        </Card>
+        <Image alt="Fat boy with curly hair holding a tube, using a beca" className="" src={Memez} />
     )
 }
