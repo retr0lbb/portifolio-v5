@@ -1,9 +1,5 @@
-import { AboutCard } from "@/components/about/aboutCard"
-import NanoCard from "@/components/about/nano-card"
-import { Backpack, Binary, Clapperboard, Joystick } from "lucide-react"
-import { FaNodeJs, FaReact } from "react-icons/fa"
-import { SiArduino, SiUdemy } from "react-icons/si"
 import Page from "@/components/sectionCreator"
+import MessageRows from "@/components/message"
 
 interface AboutProps{
   id: string
@@ -29,7 +25,16 @@ export const AboutPage: React.FC<AboutProps> = ({id}) => {
       >
 
         <Page.title>Me conheça um pouco melhor:</Page.title>
-        
+
+        <section className="w-full grid grid-cols-3 p-2">
+          {/** Componente de comentarios */}
+
+          <MessageRows.root>
+            <MessageRows.Message content="Sempre quis saber o que você faz no tempo livre posso saber?" sender="Mario Antonio" />
+            <MessageRows.Message content="Claro eu sempre goste de assistir animes, filmes e series e quando eu tenho mais tempo livre eu gosto de jogar video game" sender="you" />
+          </MessageRows.root>
+
+        </section>
       </Page.root>
     )
 }
