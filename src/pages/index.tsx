@@ -50,7 +50,7 @@ export default function Home({repo}: {repo: any[]}) {
 
           <MainSection />
           <ProjectPage id="projects"/> 
-          <AboutPage id="about"/>
+          <AboutPage />
           <Contact id="contact" repo={repo} />
           
         <Footer />
