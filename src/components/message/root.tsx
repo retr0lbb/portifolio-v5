@@ -6,7 +6,7 @@ interface rootProps {
 
 export const root: React.FC<rootProps> = ({children}) => {
     return(
-        <div className="w-full flex flex-col p-2 gap-2">
+        <div className="w-full flex flex-col px-4 py-10 gap-2 border dark:border-contrast-light/30 rounded-2xl">
             {children}
         </div>
     )
