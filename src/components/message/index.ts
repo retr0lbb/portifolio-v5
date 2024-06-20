@@ -1,5 +1,5 @@
-import {Message} from "./Message"
-import {root} from "./root"
+import { Message } from "./Message"
+import { root } from "./root"
 
 const MessageRows = {
     Message,
