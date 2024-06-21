@@ -13,7 +13,7 @@ export const Message: React.FC<MessageProps> = ({content, sender, hasSendedBefor
             </div>
             <div className={`${sender === "you"? "bg-zinc-700": "bg-zinc-800"} p-3 rounded-b-xl 
             ${sender === "you"? "rounded-tl-xl": "rounded-tr-xl"}`}>
-              <p className="text-xs md:text-sm dark:text-zinc-200 text-zinc-300">
+              <p className="text-xs sm:text-sm dark:text-zinc-200 text-zinc-300">
                 {content}
               </p>
             </div>
