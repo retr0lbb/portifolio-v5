@@ -1,5 +1,6 @@
 import ContactCard from "@/components/contact-card"
 import SOMETHING from "@/static/Ned.jpeg"
+import Beautifu from "@/static/henrique_gatinhopng.png"
 import LastActivity from "../last_activity"
 import Page from "@/components/sectionCreator"
 
@@ -29,7 +30,7 @@ export const Contact: React.FC<ContactId> = ({id, repo}) => {
                         margin: "-200px"
                     }}
                 className="">
-                    <ContactCard.header imageAlt="beautiful person centered on the middle" imgSrc={SOMETHING} subtitle="Web developer" title="Henrique Barbosa"/>
+                    <ContactCard.header imageAlt="beautiful person centered on the middle" imgSrc={Beautifu} subtitle="Web developer" title="Henrique Barbosa"/>
                     <ContactCard.body />
                 </ContactCard.root>
 
