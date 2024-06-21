@@ -1,9 +1,7 @@
 import Page from "@/components/sectionCreator"
 import MessageRows from "@/components/message"
-import Image from "next/image"
 import SomeOne from "@/static/port.png"
-import Memez from "@/static/Memez.png"
-import { Message } from "../message/Message"
+import Me from "@/static/henrique_gatinhopng.png"
 
 export const AboutPage: React.FC = () => {
     return(
@@ -28,7 +26,7 @@ export const AboutPage: React.FC = () => {
 
         <section className="w-full grid grid-cols-1 lg:grid-cols-3 p-2 gap-5">
 
-          <MessageRows.root>
+          <MessageRows.root OtherImageSrc={SomeOne} youImageSrc={Me}>
             <MessageRows.title>Meus Hobbies</MessageRows.title>
             <MessageRows.Message sender="Elon Musk" content="De fato, você tem muita habilidade na programação. Mas quem é Henrique Barbosa Sampaio fora do trabalho? O que você faz no seu tempo livre?" />
             <MessageRows.Message sender="you"       content="Fala Elon!, No meu tempo livre eu curto relaxar, jogar alguns jogos no console e assistir algumas series" />
@@ -41,7 +39,7 @@ export const AboutPage: React.FC = () => {
 
            </MessageRows.root>
 
-          <MessageRows.root>
+          <MessageRows.root OtherImageSrc={SomeOne} youImageSrc={Me}>
           <MessageRows.title>Minhas Tecnologias</MessageRows.title>
             <MessageRows.Message sender="Ryan Dahl" content="Olá, Henrique! Quais tecnologias você mais utiliza no seu trabalho como desenvolvedor?" />
             <MessageRows.Message sender="you" content="Oi, Ryan! Eu uso bastante TypeScript, Node.js, React e MongoDB." />
@@ -53,7 +51,7 @@ export const AboutPage: React.FC = () => {
             <MessageRows.Message sender="you" content="Eu que agradeço, Ryan!" />
           </MessageRows.root>
 
-          <MessageRows.root>
+          <MessageRows.root OtherImageSrc={SomeOne} youImageSrc={Me}>
           <MessageRows.title>Minha Educação</MessageRows.title>
             <MessageRows.Message sender="Barack Obama" content="Olá, Henrique! Gostaria de saber mais sobre a sua educação. Onde você estudou?" />
             <MessageRows.Message sender="you" content="Oi, Presidente Obama! Eu cursei o ensino médio integrado ao ensino técnico de Desenvolvimento de Sistemas na ETEC Uirapuru." />
