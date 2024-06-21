@@ -1,6 +1,7 @@
 import Page from "@/components/sectionCreator"
 import MessageRows from "@/components/message"
 import Image from "next/image"
+import SomeOne from "@/static/port.png"
 import Memez from "@/static/Memez.png"
 import { Message } from "../message/Message"
 
