@@ -24,7 +24,7 @@ export const AboutPage: React.FC = () => {
 
         <Page.title>Me conheça um pouco melhor:</Page.title>
 
-        <section className="w-full grid grid-cols-3 p-2 gap-5">
+        <section className="w-full grid grid-cols-1 lg:grid-cols-3 p-2 gap-5">
 
           <MessageRows.root>
             <MessageRows.title>Meus Hobbies</MessageRows.title>
