@@ -1,6 +1,7 @@
 import Page from "@/components/sectionCreator"
 import MessageRows from "@/components/message"
 import SomeOne from "@/static/port.png"
+import Musk from "@/static/musk.webp"
 import Me from "@/static/henrique_gatinhopng.png"
 
 export const AboutPage: React.FC = () => {
@@ -25,8 +26,8 @@ export const AboutPage: React.FC = () => {
         <Page.title>Me conheça um pouco melhor:</Page.title>
 
         <section className="w-full grid grid-cols-1 lg:grid-cols-3 p-2 gap-5">
-
-          <MessageRows.root OtherImageSrc={SomeOne} youImageSrc={Me}>
+          
+          <MessageRows.root>
             <MessageRows.title>Meus Hobbies</MessageRows.title>
             <MessageRows.Message sender="Elon Musk" content="De fato, você tem muita habilidade na programação. Mas quem é Henrique Barbosa Sampaio fora do trabalho? O que você faz no seu tempo livre?" />
             <MessageRows.Message sender="you"       content="Fala Elon!, No meu tempo livre eu curto relaxar, jogar alguns jogos no console e assistir algumas series" />
@@ -36,11 +37,10 @@ export const AboutPage: React.FC = () => {
             <MessageRows.Message sender="you" hasSendedBefore content="Mas o meu maior hobbie mesmo é a programação, To sempre pensando em novas ideias de site e aplicativos" />
             <MessageRows.Message sender="Elon Musk" content="Bom saber que você realmente é apaixonado pela programação"/>
             <MessageRows.Message sender="Elon Musk" hasSendedBefore content="E Bora jogar Juntos sim!"/>
-
            </MessageRows.root>
 
-          <MessageRows.root OtherImageSrc={SomeOne} youImageSrc={Me}>
-          <MessageRows.title>Minhas Tecnologias</MessageRows.title>
+          <MessageRows.root>
+            <MessageRows.title>Minhas Tecnologias</MessageRows.title>
             <MessageRows.Message sender="Ryan Dahl" content="Olá, Henrique! Quais tecnologias você mais utiliza no seu trabalho como desenvolvedor?" />
             <MessageRows.Message sender="you" content="Oi, Ryan! Eu uso bastante TypeScript, Node.js, React e MongoDB." />
             <MessageRows.Message sender="Ryan Dahl" content="Ótima escolha com Node.js! O que você mais gosta em trabalhar com essas tecnologias?" />
@@ -51,8 +51,8 @@ export const AboutPage: React.FC = () => {
             <MessageRows.Message sender="you" content="Eu que agradeço, Ryan!" />
           </MessageRows.root>
 
-          <MessageRows.root OtherImageSrc={SomeOne} youImageSrc={Me}>
-          <MessageRows.title>Minha Educação</MessageRows.title>
+          <MessageRows.root>
+            <MessageRows.title>Minha Educação</MessageRows.title>
             <MessageRows.Message sender="Barack Obama" content="Olá, Henrique! Gostaria de saber mais sobre a sua educação. Onde você estudou?" />
             <MessageRows.Message sender="you" content="Oi, Presidente Obama! Eu cursei o ensino médio integrado ao ensino técnico de Desenvolvimento de Sistemas na ETEC Uirapuru." />
             <MessageRows.Message sender="Barack Obama" content="Isso é impressionante! E você fez algum curso adicional?" />
