@@ -31,11 +31,11 @@ export const MainSection: React.FC = () => {
 
             <div className="w-full mt-8 border-t border-black/50 dark:border-white/20 pt-5" >
                 <div className="flex items-center gap-3 ">
-                    <IconButton href="https://www.linkedin.com/in/retr0lbb/">
+                    <IconButton href="https://www.linkedin.com/in/henrique-barbosa-sampaio/">
                         <FaLinkedinIn/>
                     </IconButton>
 
-                    <IconButton href="https://api.whatsapp.com/send?phone=5511999429345&text=Olá">
+                    <IconButton href="https://api.whatsapp.com/send?phone=5511999429345">
                         <FaWhatsapp />
                     </IconButton>
 

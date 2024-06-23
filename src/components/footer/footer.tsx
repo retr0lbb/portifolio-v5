@@ -10,12 +10,12 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col gap-2">
             <p className="text-xs">Redes sociais:</p>
             <div className="flex items-center">
-              <IconButton Icon={FaGithub} href="https://github.com/retr0lbb" className="!bg-transparent hover:bg-transparent border-none hover:scale-105 size-10" />
-              <IconButton Icon={FaLinkedin} href="https://www.linkedin.com/in/retr0lbb/" className="!bg-transparent hover:bg-transparent border-none hover:scale-105 size-10" />
-              <IconButton Icon={SiGmail} className="!bg-transparent hover:bg-transparent border-none hover:scale-105 size-10" />
-              <IconButton Icon={FaInstagram} className="!bg-transparent hover:bg-transparent border-none hover:scale-105 size-10" />
-              <IconButton Icon={BsTwitterX} className="!bg-transparent hover:bg-transparent border-none hover:scale-105 size-10" />
-              <IconButton Icon={FaWhatsapp} className="!bg-transparent hover:bg-transparent border-none hover:scale-105 size-10" />
+              <IconButton Icon={FaGithub}    href="https://github.com/retr0lbb" className="!bg-transparent hover:bg-transparent border-none hover:scale-105 size-10" />
+              <IconButton Icon={FaLinkedin}  href="https://www.linkedin.com/in/henrique-barbosa-sampaio/" className="!bg-transparent hover:bg-transparent border-none hover:scale-105 size-10" />
+              <IconButton Icon={SiGmail}     href={`mailto:${"retr0lbb@gmail.com"}?subject=${encodeURIComponent("Website")}`} className="!bg-transparent hover:bg-transparent border-none hover:scale-105 size-10" />
+              <IconButton Icon={FaInstagram} href="https://www.instagram.com/lilhenry_trapstar" className="!bg-transparent hover:bg-transparent border-none hover:scale-105 size-10" />
+              <IconButton Icon={BsTwitterX}  href="https://twitter.com/morro_do_alema" className="!bg-transparent hover:bg-transparent border-none hover:scale-105 size-10" />
+              <IconButton Icon={FaWhatsapp}  href="https://api.whatsapp.com/send?phone=5511999429345" className="!bg-transparent hover:bg-transparent border-none hover:scale-105 size-10" />
             </div>
           </div>
         </footer>
