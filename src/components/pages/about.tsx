@@ -1,8 +1,14 @@
 import Page from "@/components/sectionCreator"
 import MessageRows from "@/components/message"
-import SomeOne from "@/static/port.png"
-import Musk from "@/static/musk.webp"
-import Me from "@/static/henrique_gatinhopng.png"
+import Me from "@/static/Main.png"
+import Image from "next/image"
+import { Button } from "@nextui-org/react"
+import { IoIosPaper, IoIosSchool } from "react-icons/io";
+import { RiNextjsFill } from "react-icons/ri";
+import { FaReact, FaNodeJs } from "react-icons/fa";
+import { SiTypescript, SiPrisma, SiMongodb, SiRust, SiNestjs } from "react-icons/si"
+import { FaComputer } from "react-icons/fa6";
+import { TecnologyCard } from "../tecnology-card"
 
 export const AboutPage: React.FC = () => {
     return(
@@ -23,36 +29,37 @@ export const AboutPage: React.FC = () => {
         }}
       >
 
-        <Page.title>Me conheça um pouco melhor:</Page.title>
+        <Page.title>Sobre Mim:</Page.title>
+        <section className="w-full grid grid-cols-1 lg:grid-cols-3 pt-5 gap-3 border-t border-contrast-light/30">
+          <div className="flex flex-col items-center gap-20 px-4 pt-6">
+            <Image draggable={false} className="lg:size-96 size-72  object-cover rounded-full outline outline-contrast-light" src={Me} alt="chubby boy in a dark blue smoking with blue decorations holding a sign in front of himself" />
+            <div className="flex flex-col items-start">
+              <div className="text-left px-8 py-4 bg-zinc-800 rounded-b-3xl rounded-tr-3xl text-sm md:text-normal">
+                Meu nome é Henrique Barbosa Sampaio, tenho 18 anos. Busco me aperfeiçoar na tecnica da programação, por meio de novas tecnologias. Sempre busco novos aprendizados e gosto de fazer as coisas por mim mesmo, no estilo DIY
+              </div> 
+              <Button size="lg" className="mt-4 rounded-tl-none" startContent={<IoIosPaper />}>Baixe o Meu Curriculo</Button>
+            </div>
+          </div>
 
-        <section className="w-full grid grid-cols-1 lg:grid-cols-3 p-2 gap-5">
-          
-          <MessageRows.root>
-            <MessageRows.title>Meus Hobbies</MessageRows.title>
-            <MessageRows.Message sender="Elon Musk" content="De fato, você tem muita habilidade na programação. Mas quem é Henrique Barbosa Sampaio fora do trabalho? O que você faz no seu tempo livre?" />
-            <MessageRows.Message sender="you"       content="Fala Elon!, No meu tempo livre eu curto relaxar, jogar alguns jogos no console e assistir algumas series" />
-            <MessageRows.Message sender="Elon Musk" content="Interessante, eu estou com um bom tempo livre agora. Que serie que você assite?" />
-            <MessageRows.Message sender="you"       content="Ultimamente eu estou assistindo muito Jojo Bizarre Adventures" />
-            <MessageRows.Message sender="you" hasSendedBefore content="E estou jogando Valorant ultimamente, Bora jogar junto?" />
-            <MessageRows.Message sender="you" hasSendedBefore content="Mas o meu maior hobbie mesmo é a programação, To sempre pensando em novas ideias de site e aplicativos" />
-            <MessageRows.Message sender="Elon Musk" content="Bom saber que você realmente é apaixonado pela programação"/>
-            <MessageRows.Message sender="Elon Musk" hasSendedBefore content="E Bora jogar Juntos sim!"/>
-           </MessageRows.root>
+          <div className="flex flex-col items-center">
+            <div className="col-span-2 text-center w-full flex items-center justify-center place-items-center text-3xl font-bold mt-6">
+              <FaComputer className="mr-5" />
+              <p>Tecnologias</p>
+            </div>
+            <div className="grid grid-cols-2 gap-5 p-5 place-items-center text-6xl md:text-7xl">
+              <TecnologyCard Icon={RiNextjsFill} tecName="Nextjs" />
+              <TecnologyCard Icon={FaReact} tecName="Reactjs" />
+              <TecnologyCard Icon={FaNodeJs} tecName="Nodejs" />
+              <TecnologyCard Icon={SiTypescript} tecName="Typescript" />
+              <TecnologyCard Icon={SiPrisma} tecName="Prisma ORM" />
+              <TecnologyCard Icon={SiMongodb} tecName="Mongo DB" />
+              <TecnologyCard Icon={SiRust} tecName="Rust" />
+              <TecnologyCard Icon={SiNestjs} tecName="NestJs" />
+            </div>
+          </div>
 
           <MessageRows.root>
-            <MessageRows.title>Minhas Tecnologias</MessageRows.title>
-            <MessageRows.Message sender="Ryan Dahl" content="Olá, Henrique! Quais tecnologias você mais utiliza no seu trabalho como desenvolvedor?" />
-            <MessageRows.Message sender="you" content="Oi, Ryan! Eu uso bastante TypeScript, Node.js, React e MongoDB." />
-            <MessageRows.Message sender="Ryan Dahl" content="Ótima escolha com Node.js! O que você mais gosta em trabalhar com essas tecnologias?" />
-            <MessageRows.Message sender="you" content="Adoro a eficiência do Node.js para backend, e React facilita muito o desenvolvimento frontend dinâmico. MongoDB é perfeito para projetos que precisam de flexibilidade no banco de dados." />
-            <MessageRows.Message sender="Ryan Dahl" content="Concordo totalmente! E você tem algum projeto favorito que usou essas tecnologias?" />
-            <MessageRows.Message sender="you" content="Sim, desenvolvi uma aplicação de gerenciamento de tarefas usando essa stack. Foi um desafio interessante e aprendi muito." />
-            <MessageRows.Message sender="Ryan Dahl" content="Parece incrível! Obrigado por compartilhar, Henrique." />
-            <MessageRows.Message sender="you" content="Eu que agradeço, Ryan!" />
-          </MessageRows.root>
-
-          <MessageRows.root>
-            <MessageRows.title>Minha Educação</MessageRows.title>
+            <MessageRows.title><IoIosSchool className="mr-5"/>Minha Educação</MessageRows.title>
             <MessageRows.Message sender="Barack Obama" content="Olá, Henrique! Gostaria de saber mais sobre a sua educação. Onde você estudou?" />
             <MessageRows.Message sender="you" content="Oi, Presidente Obama! Eu cursei o ensino médio integrado ao ensino técnico de Desenvolvimento de Sistemas na ETEC Uirapuru." />
             <MessageRows.Message sender="Barack Obama" content="Isso é impressionante! E você fez algum curso adicional?" />
@@ -62,7 +69,6 @@ export const AboutPage: React.FC = () => {
             <MessageRows.Message sender="Barack Obama" content="Muito bom, Henrique. É ótimo ver você investindo na sua educação."/>
             <MessageRows.Message sender="you" content="Obrigado, Presidente Obama! Fico feliz em compartilhar isso com você." />
           </MessageRows.root>
-
         </section>
       </Page.root>
     )
