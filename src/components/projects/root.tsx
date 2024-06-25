@@ -12,8 +12,8 @@ export const root: React.FC<rootProps> = ({buttons, ...props}) => {
         <div 
             className={
             twMerge("w-full h-full min-h-52 lg:min-h-72 bg-gradient-to-br group relative p-4 from-white/20 to-white/30",
-             "rounded-2xl transition-all overflow-hidden border border-black/10 dark:border-white/10",
-            props.className)
+                    "rounded-2xl transition-all overflow-hidden border border-black/10 dark:border-white/10",
+                    props.className)
         }>
             {props.children}
 

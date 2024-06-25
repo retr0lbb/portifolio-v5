@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import {Analytics} from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next"
 
 
 export default function Document() {
@@ -9,7 +9,7 @@ export default function Document() {
       <body>
             <Main />
             <NextScript />
-            <Analytics mode="production" />
+            <Analytics />
       </body>
     </Html>
   );

@@ -40,7 +40,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     buttons={
                     <ProjectCard.links>
                         <IconButton Icon={Github} isDarkmodeMandatory href="https://github.com/retr0lbb/N.E.R.D" />
-                        <IconButton Icon={Globe} isDarkmodeMandatory />
+                        <IconButton Icon={Globe} isDarkmodeMandatory disabled />
                     </ProjectCard.links>
                     }
                 >
@@ -67,8 +67,8 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     description="Projeto de portifolio que ultilza o next js para criar uma pagina eficiente que otimiza o SEO da pagina"
                     buttons={
                     <ProjectCard.links>
-                        <IconButton isDarkmodeMandatory Icon={Github} />
-                        <IconButton isDarkmodeMandatory Icon={Globe} />
+                        <IconButton isDarkmodeMandatory Icon={Github} href="https://github.com/retr0lbb/portifolio-v5"/>
+                        <IconButton isDarkmodeMandatory Icon={Globe} href="https://portifolio-v5.vercel.app"/>
                     </ProjectCard.links>
                     }
                 >
@@ -81,7 +81,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     description="Uma loja online de replicas de calçados do tipo sneakers por um preço justo e acessivel"
                     buttons={
                     <ProjectCard.links>
-                        <IconButton isDarkmodeMandatory Icon={Github} />
+                        <IconButton isDarkmodeMandatory Icon={Github} disabled />
                         <IconButton isDarkmodeMandatory href="https://boomsneakers.com" Icon={Globe} />
                     </ProjectCard.links>
                     }
