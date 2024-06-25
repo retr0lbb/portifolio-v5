@@ -12,7 +12,7 @@ interface iconButtonProps extends React.ComponentProps<"button">{
 
 export const IconButton: React.FC<iconButtonProps> = ({isDarkmodeMandatory, href, className, Icon, ...props}) => {
     return(
-        <a href={href} target="_blank">
+        <a href={href} target="_blank" rel="noopener noreferrer">
         <button className={twMerge(
                     "size-10 md:size-12 lg:size-14 text-xl md:text-2xl lg:text-3xl rounded-full border grid place-items-center",
                     isDarkmodeMandatory

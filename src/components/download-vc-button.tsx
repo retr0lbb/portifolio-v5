@@ -6,6 +6,8 @@ export const DownloadVcButton: React.FC = () => {
         const filePath = "/output/Henrique Barbosa.pdf"
         const link = document.createElement("a")
         link.href = filePath;
+        link.rel = 'noopener noreferrer'; 
+        link.target = "_blank"
         link.download = "Henrique-Barbosa.pdf"
         link.click()
     }
