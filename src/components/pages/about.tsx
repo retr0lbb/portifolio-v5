@@ -2,13 +2,13 @@ import Page from "@/components/sectionCreator"
 import MessageRows from "@/components/message"
 import Me from "@/static/Main.png"
 import Image from "next/image"
-import { Button } from "@nextui-org/react"
-import { IoIosPaper, IoIosSchool } from "react-icons/io";
+import {  IoIosSchool } from "react-icons/io";
 import { RiNextjsFill } from "react-icons/ri";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { SiTypescript, SiPrisma, SiMongodb, SiRust, SiNestjs } from "react-icons/si"
 import { FaComputer } from "react-icons/fa6";
 import { TecnologyCard } from "../tecnology-card"
+import { DownloadVcButton } from "../download-vc-button"
 
 export const AboutPage: React.FC = () => {
     return(
@@ -29,20 +29,21 @@ export const AboutPage: React.FC = () => {
         }}
       >
 
-        <Page.title>Sobre Mim:</Page.title>
-        <section className="w-full grid grid-cols-1 lg:grid-cols-3 pt-5 gap-3 border-t border-contrast-light/30">
+        <Page.title >Sobre Mim:</Page.title>
+        <section className="w-full grid grid-cols-1 lg:grid-cols-3 gap-3 border-contrast-light/30">
           <div className="flex flex-col items-center gap-20 px-4 pt-6">
             <Image draggable={false} className="lg:size-96 size-72  object-cover rounded-full outline outline-contrast-light" src={Me} alt="chubby boy in a dark blue smoking with blue decorations holding a sign in front of himself" />
-            <div className="flex flex-col items-start">
-              <div className="text-left px-8 py-4 bg-zinc-800 rounded-b-3xl rounded-tr-3xl text-sm md:text-normal">
-                Meu nome é Henrique Barbosa Sampaio, tenho 18 anos. Busco me aperfeiçoar na tecnica da programação, por meio de novas tecnologias. Sempre busco novos aprendizados e gosto de fazer as coisas por mim mesmo, no estilo DIY
+            
+            <div className="flex flex-col items-center">
+              <div className="text-left px-8 py-4 dark:bg-zinc-800 bg-zinc-200 text-zinc-900 dark:text-zinc-200 rounded-b-3xl rounded-tr-3xl text-sm md:text-normal">
+                Meu nome é <strong>Henrique Barbosa Sampaio</strong>, tenho 18 anos. Busco me aperfeiçoar na tecnica da programação, por meio de novas tecnologias. Sempre busco novos aprendizados e gosto de fazer as coisas por mim mesmo, no estilo DIY
               </div> 
-              <Button size="lg" className="mt-4 rounded-tl-none" startContent={<IoIosPaper />}>Baixe o Meu Curriculo</Button>
+              <DownloadVcButton />
             </div>
           </div>
 
           <div className="flex flex-col items-center">
-            <div className="col-span-2 text-center w-full flex items-center justify-center place-items-center text-3xl font-bold mt-6">
+            <div className="col-span-2 text-center w-full flex items-center justify-center place-items-center text-xl md:text-2xl lg:text-3xl font-bold mt-6">
               <FaComputer className="mr-5" />
               <p>Tecnologias</p>
             </div>
