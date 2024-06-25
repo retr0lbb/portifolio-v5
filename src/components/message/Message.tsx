@@ -8,7 +8,7 @@ export interface MessageProps {
 
 export const Message: React.FC<MessageProps> = ({content, sender, hasSendedBefore}) => {
     return(
-        <div className={`flex flex-col max-w-[80%] md:max-w-[70%] 
+        <div className={`flex flex-col max-w-[75%] md:max-w-[70%] lg:max-w-[60%] 
         ${sender === "you" ? "self-end items-end" : "items-start"}`}>
             <div className="flex items-baseline gap-2 justify-between text-xs dark:text-zinc-500 text-zinc-400">
               {!hasSendedBefore?
