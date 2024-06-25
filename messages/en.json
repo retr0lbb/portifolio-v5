@@ -1,0 +1,17 @@
+{
+    "Main": {
+        "title": "eu sou um furry flat"
+    },
+    "Project": {
+        "Title": "See my experience:"
+    },
+    "About": {
+        "Title": "About me:",
+        "Education": "My Education",
+        "tec": "technologies"
+    },
+    "Contact": {
+        "Title": "Contact:",
+        "Activities": "Recent Activities"
+    }
+}

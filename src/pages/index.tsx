@@ -33,10 +33,14 @@ const loadData = async() => {
 
   return repo
 }
-export const getStaticProps: GetServerSideProps<any> = async () => {
+export const getStaticProps: GetServerSideProps<any> = async (context) => {
   const repo = await loadData();
   return {
-      props: {repo}
+      props: {
+        repo,
+
+        messages: (await import(`../../messages/${context.locale}.json`)).default
+      }
   }
 }
 

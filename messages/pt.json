@@ -1,0 +1,17 @@
+{
+    "Main": {
+        "title": "eu sou um memetico mel flat"
+    },
+    "Project": {
+        "Title": "Veja a minha expêriencia:"
+    },
+    "About": {
+        "Title": "Sobre Mim:",
+        "Education": "Minha Educação",
+        "tec": "Tecnologias"
+    },
+    "Contact": {
+        "Title": "Contato:",
+        "Activities": "Atividades Recentes:"
+    }
+}

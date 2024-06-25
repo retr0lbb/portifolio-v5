@@ -4,8 +4,10 @@ import { FaWhatsapp, FaLinkedinIn, FaEnvelope } from "react-icons/fa"
 import { ChevronsDown } from "lucide-react"
 import { motion } from "framer-motion"
 import Page from "@/components/sectionCreator"
+import {useTranslations} from "next-intl"
 
 export const MainSection: React.FC = () => {
+    const t = useTranslations("Main")
     const words = ["Web", "Mobile", "Game"]
     return(
         <Page.root id="home" initial={{opacity: 0}} animate={{opacity: 1}} className="relative h-screen">

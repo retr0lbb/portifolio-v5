@@ -2,6 +2,7 @@ import ContactCard from "@/components/contact-card"
 import Me from "@/static/Main.png"
 import LastActivity from "../last_activity"
 import Page from "@/components/sectionCreator"
+import { useTranslations } from "next-intl"
 
 interface ContactId {
     id: string,
@@ -9,10 +10,11 @@ interface ContactId {
 }
 
 export const Contact: React.FC<ContactId> = ({id, repo}) => {
+    const t = useTranslations("Contact")
     return(
             <Page.root className="" id="contact">
                 <Page.title>
-                    Como falar comigo?
+                    {t("Title")}
                 </Page.title>
             <div className="w-full flex flex-col lg:flex-row px-5 gap-10 mt-10">
                 <ContactCard.root

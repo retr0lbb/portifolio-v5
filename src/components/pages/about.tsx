@@ -2,15 +2,17 @@ import Page from "@/components/sectionCreator"
 import MessageRows from "@/components/message"
 import Me from "@/static/Main.png"
 import Image from "next/image"
-import {  IoIosSchool } from "react-icons/io";
+import { IoIosSchool } from "react-icons/io";
 import { RiNextjsFill } from "react-icons/ri";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { SiTypescript, SiPrisma, SiMongodb, SiRust, SiNestjs } from "react-icons/si"
 import { FaComputer } from "react-icons/fa6";
 import { TecnologyCard } from "../tecnology-card"
 import { DownloadVcButton } from "../download-vc-button"
+import {useTranslations} from "next-intl"
 
 export const AboutPage: React.FC = () => {
+  const t = useTranslations("About")
     return(
       <Page.root 
         id="about" 
@@ -29,7 +31,7 @@ export const AboutPage: React.FC = () => {
         }}
       >
 
-        <Page.title >Sobre Mim:</Page.title>
+        <Page.title >{t("Title")}</Page.title>
         <section className="w-full grid grid-cols-1 lg:grid-cols-3 gap-3 border-contrast-light/30">
           <div className="flex flex-col items-center gap-20 px-4 pt-6">
             <Image draggable={false} className="lg:size-96 size-72  object-cover rounded-full outline outline-contrast-light" src={Me} alt="chubby boy in a dark blue smoking with blue decorations holding a sign in front of himself" />
@@ -45,7 +47,7 @@ export const AboutPage: React.FC = () => {
           <div className="flex flex-col items-center">
             <div className="col-span-2 text-center w-full flex items-center justify-center place-items-center text-xl md:text-2xl lg:text-3xl font-bold mt-6">
               <FaComputer className="mr-5" />
-              <p>Tecnologias</p>
+              <p>{t("tec")}</p>
             </div>
             <div className="grid grid-cols-2 gap-5 p-5 place-items-center text-6xl md:text-7xl">
               <TecnologyCard Icon={RiNextjsFill} tecName="Nextjs" />
@@ -60,7 +62,7 @@ export const AboutPage: React.FC = () => {
           </div>
 
           <MessageRows.root>
-            <MessageRows.title><IoIosSchool className="mr-5"/>Minha Educação</MessageRows.title>
+            <MessageRows.title><IoIosSchool className="mr-5"/>{t("Education")}</MessageRows.title>
             <MessageRows.Message sender="Barack Obama" content="Olá, Henrique! Gostaria de saber mais sobre a sua educação. Onde você estudou?" />
             <MessageRows.Message sender="you" content="Oi, Presidente Obama! Eu cursei o ensino médio integrado ao ensino técnico de Desenvolvimento de Sistemas na ETEC Uirapuru." />
             <MessageRows.Message sender="Barack Obama" content="Isso é impressionante! E você fez algum curso adicional?" />

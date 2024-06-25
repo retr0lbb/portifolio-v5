@@ -7,12 +7,14 @@ import React from "react"
 import { IconButton } from "@/components/iconButton"
 import { Github, Globe } from "lucide-react"
 import Page from "@/components/sectionCreator"
+import { useTranslations } from "next-intl"
 
 interface ProjectPageProps{
     id: string
 }
 
 export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
+    const t = useTranslations("Project")
     return(
         <Page.root
             initial={{
@@ -29,7 +31,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
             }}
             className="gap-8" id={id}>
 
-            <Page.title>Veja a minha expêriencia:</Page.title>
+            <Page.title>{t("Title")}</Page.title>
             <section
                 className="w-full grid grid-cols-1 lg:grid-cols-5 place-items-center gap-8 lg:gap-3 overflow-y-hidden"
             >
