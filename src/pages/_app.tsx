@@ -4,7 +4,7 @@ import type { AppProps } from "next/app";
 import { Providers as ThemeProvider } from "@/providers/theme.provider"
 import { Providers } from "@/providers/nextUi.provider"
 import { Poppins } from "next/font/google"
-import {NextIntlClientProvider} from "next-intl"
+import { NextIntlClientProvider } from "next-intl"
 import { useRouter } from "next/router";
 
 
