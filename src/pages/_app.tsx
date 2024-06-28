@@ -6,6 +6,7 @@ import { Providers } from "@/providers/nextUi.provider"
 import { Poppins } from "next/font/google"
 import { NextIntlClientProvider } from "next-intl"
 import { useRouter } from "next/router";
+import { Analytics } from "@vercel/analytics/react"
 
 
 const rubick = Poppins({
@@ -18,6 +19,7 @@ const rubick = Poppins({
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
   return (
+    <>
     <ThemeProvider>
       <Providers>
         <main className={rubick.className}>
@@ -31,5 +33,7 @@ export default function App({ Component, pageProps }: AppProps) {
         </main>
       </Providers>
     </ThemeProvider>
+    <Analytics />
+    </>
   )
 }
