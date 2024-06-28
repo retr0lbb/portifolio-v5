@@ -3,15 +3,45 @@
         "title": "eu sou um furry flat"
     },
     "Project": {
-        "Title": "See my experience:"
+        "Title": "See my experience:",
+        "Nerd": {
+            "desc": "An online store for digital games focused on the distribution of national games."
+        },
+        "Port": {
+            "desc": "A portfolio project that uses Next.js to create an efficient page that optimizes the page's SEO."
+        },
+        "Vote": {
+            "desc":"A simple polling vote application that is easy to use, with WebSocket integration and a Redis database."
+        },
+        "Boom": {
+            "desc": "An e-commerce offering replica sneakers at a good and accessible price."
+        }
     },
     "About": {
         "Title": "About me:",
         "Education": "My Education",
-        "tec": "technologies"
+        "tec": "technologies",
+        "Me": {
+            "msgMain": {
+                "pt1": "My name is",
+                "pt2": "I have 18 years old. I seek to improve my programming skills through new technologies. I always seek new learning experiences and doing things myself."
+            },
+            "cv": "Download My Curriculum"
+        },
+        "Messages": {
+            "m1": "Hello, Henrique! I would like to know more about your education. Where did you studied?",
+            "m2": "Hi, President Obama! I attended high school integrated with technical education in Systems Development at ETEC Uirapuru.",
+            "m3": "That's impressive! Did you take any additional courses?",
+            "m4": "Yes, I completed courses in React, Node.js, and NestJS on Udemy. I also participated in Rocketseat's NLW.",
+            "m5": "Excellent! How did these additional courses contribute to your education?",
+            "m6": "They deepened my practical knowledge and kept me updated with the latest technologies in web development.",
+            "m7": "Very good, Henrique. It's great to see you investing in your education.",
+            "m8": "Thank you, President Obama! I'm glad to share this with you."
+        }
     },
     "Contact": {
         "Title": "Contact:",
-        "Activities": "Recent Activities"
+        "Activities": "Recent Activities",
+        "by": "Contact by:"
     }
 }

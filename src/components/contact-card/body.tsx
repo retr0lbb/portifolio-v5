@@ -1,9 +1,11 @@
 import { Snippet } from "@nextui-org/react"
+import { useTranslations } from "next-intl"
 
 export const body: React.FC = () => {
+    const t = useTranslations("Contact")
     return(
         <div className="w-full flex flex-1 flex-col pb-4 items-center justify-center">
-        <p className="text-md lg:text-2xl font-mono text-contrast-dark/70 dark:text-contrast-light/80">Contato por:</p>
+        <p className="text-md lg:text-2xl font-mono text-contrast-dark/70 dark:text-contrast-light/80">{t("by")}</p>
         
         <div className="flex flex-col items-start justify-around gap-4 py-2">
             <div className="w-full">

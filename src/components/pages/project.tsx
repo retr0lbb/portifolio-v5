@@ -38,7 +38,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                 <ProjectCard.root 
                     className="lg:col-span-2" 
                     title="N.E.R.D" 
-                    description="Uma loja online de jogos digitais focada na distribuição de jogos nacionais"
+                    description={t("Nerd.desc")}
                     buttons={
                     <ProjectCard.links>
                         <IconButton Icon={Github} isDarkmodeMandatory href="https://github.com/retr0lbb/N.E.R.D" />
@@ -52,7 +52,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                 <ProjectCard.root 
                     className="lg:col-span-3 lg:row-span-2" 
                     title="Vote Now" 
-                    description="Uma aplicação de votação em enquetes simples e facil com integração com web sockets e redis database"
+                    description={t("Vote.desc")}
                     buttons={
                     <ProjectCard.links>
                         <IconButton Icon={Github} isDarkmodeMandatory href="https://github.com/retr0lbb/Vote-now" />
@@ -66,7 +66,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                 <ProjectCard.root 
                     className="lg:col-span-2" 
                     title="Portifolio v5" 
-                    description="Projeto de portifolio que ultilza o next js para criar uma pagina eficiente que otimiza o SEO da pagina"
+                    description={t("Port.desc")}
                     buttons={
                     <ProjectCard.links>
                         <IconButton isDarkmodeMandatory Icon={Github} href="https://github.com/retr0lbb/portifolio-v5"/>
@@ -80,7 +80,7 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                 <ProjectCard.root 
                     className="lg:col-span-3" 
                     title="Boom Sneakers" 
-                    description="Uma loja online de replicas de calçados do tipo sneakers por um preço justo e acessivel"
+                    description={t("Boom.desc")}
                     buttons={
                     <ProjectCard.links>
                         <IconButton isDarkmodeMandatory Icon={Github} disabled />

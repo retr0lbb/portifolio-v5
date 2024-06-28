@@ -3,15 +3,46 @@
         "title": "eu sou um memetico mel flat"
     },
     "Project": {
-        "Title": "Veja a minha expêriencia:"
+        "Title": "Veja a minha expêriencia:",
+        "Nerd": {
+            "desc": "Uma loja online de jogos digitais focada na distribuição de jogos nacionais."
+        },
+        "Port": {
+            "desc": "Projeto de portifolio que ultilza o next js para criar uma pagina eficiente que otimiza o SEO da pagina"
+        },
+        "Vote": {
+            "desc":"Uma aplicação de votação em enquetes simples e facil com integração com web sockets e redis database"
+        },
+        "Boom": {
+            "desc": "Uma loja online de replicas de calçados do tipo sneakers por um preço justo e acessivel"
+        }
     },
     "About": {
         "Title": "Sobre Mim:",
         "Education": "Minha Educação",
-        "tec": "Tecnologias"
+        "tec": "Tecnologias",
+        "Me": {
+            "msgMain": {
+                "pt1": "Meu nome é",
+                "pt2": "Eu tenho 18 anos. Eu busco melhorar minhas tecnicas de programação atravez de novas tecnologias. Eu sempre busco novas experiencias de aprendizado e fazer as coisas do meu jeito."
+            },
+            "cv": "Baixe o Meu Currículo"
+        },
+        "Messages": {
+            "m1": "Olá, Henrique! Gostaria de saber mais sobre a sua educação. Onde você estudou?",
+            "m2": "Oi, Presidente Obama! Eu cursei o ensino médio integrado ao ensino técnico de Desenvolvimento de Sistemas na ETEC Uirapuru.",
+            "m3": "Isso é impressionante! E você fez algum curso adicional?",
+            "m4": "Sim, concluí cursos de React, Node.js e NestJS na Udemy. Também participei do NLW da Rocketseat.",
+            "m5": "Excelente! Como esses cursos adicionais ajudaram na sua formação?",
+            "m6": "Eles aprofundaram meu conhecimento prático e me mantiveram atualizado com as tecnologias mais recentes no desenvolvimento web.",
+            "m7": "Muito bom, Henrique. É ótimo ver você investindo na sua educação.",
+            "m8": "Obrigado, Presidente Obama! Fico feliz em compartilhar isso com você."
+        }
+
     },
     "Contact": {
         "Title": "Contato:",
-        "Activities": "Atividades Recentes:"
+        "Activities": "Atividades Recentes:",
+        "by": "Contato por:"
     }
 }

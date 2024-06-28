@@ -4,12 +4,8 @@ import { MainSection } from "../components/pages/main"
 import { AboutPage } from "../components/pages/about"
 import { Footer } from "@/components/footer/footer"
 import { Contact } from "../components/pages/contact"
-import { ThemeSwap } from "@/components/themeSwap"
-import LanguageButton from "@/components/languageButton"
 import { GetServerSideProps } from "next"
 import { Octokit } from "octokit"
-import { Folder, LucideHome, Phone, User2 } from "lucide-react"
-import { Menu, X } from "lucide-react"
 
 
 const loadData = async() => {
@@ -35,12 +31,14 @@ const loadData = async() => {
 }
 export const getStaticProps: GetServerSideProps<any> = async (context) => {
   const repo = await loadData();
+
+  const messages = (await import(`../../messages/${context.locale}.json`)).default
   return {
       props: {
         repo,
-
-        messages: (await import(`../../messages/${context.locale}.json`)).default
-      }
+        messages
+      },
+      
   }
 }
 

@@ -38,7 +38,7 @@ export const AboutPage: React.FC = () => {
             
             <div className="flex flex-col items-center">
               <div className="text-left px-8 py-4 dark:bg-zinc-800 bg-zinc-200 text-zinc-900 dark:text-zinc-200 rounded-b-3xl rounded-tr-3xl text-sm md:text-normal">
-                Meu nome é <strong>Henrique Barbosa Sampaio</strong>, tenho 18 anos. Busco me aperfeiçoar na tecnica da programação, por meio de novas tecnologias. Sempre busco novos aprendizados e gosto de fazer as coisas por mim mesmo, no estilo DIY
+                {t("Me.msgMain.pt1")+ " "} <strong>Henrique Barbosa Sampaio</strong>{", " + t("Me.msgMain.pt2")}
               </div> 
               <DownloadVcButton />
             </div>
@@ -63,14 +63,14 @@ export const AboutPage: React.FC = () => {
 
           <MessageRows.root>
             <MessageRows.title><IoIosSchool className="mr-5"/>{t("Education")}</MessageRows.title>
-            <MessageRows.Message sender="Barack Obama" content="Olá, Henrique! Gostaria de saber mais sobre a sua educação. Onde você estudou?" />
-            <MessageRows.Message sender="you" content="Oi, Presidente Obama! Eu cursei o ensino médio integrado ao ensino técnico de Desenvolvimento de Sistemas na ETEC Uirapuru." />
-            <MessageRows.Message sender="Barack Obama" content="Isso é impressionante! E você fez algum curso adicional?" />
-            <MessageRows.Message sender="you" content="Sim, concluí cursos de React, Node.js e NestJS na Udemy. Também participei do NLW da Rocketseat." />
-            <MessageRows.Message sender="Barack Obama" content="Excelente! Como esses cursos adicionais ajudaram na sua formação?" />
-            <MessageRows.Message sender="you" content="Eles aprofundaram meu conhecimento prático e me mantiveram atualizado com as tecnologias mais recentes no desenvolvimento web." />
-            <MessageRows.Message sender="Barack Obama" content="Muito bom, Henrique. É ótimo ver você investindo na sua educação."/>
-            <MessageRows.Message sender="you" content="Obrigado, Presidente Obama! Fico feliz em compartilhar isso com você." />
+            <MessageRows.Message sender="Barack Obama" content={t("Messages.m1")} />
+            <MessageRows.Message sender="you" content={t("Messages.m2")} />
+            <MessageRows.Message sender="Barack Obama" content={t("Messages.m3")} />
+            <MessageRows.Message sender="you" content={t("Messages.m4")} />
+            <MessageRows.Message sender="Barack Obama" content={t("Messages.m5")} />
+            <MessageRows.Message sender="you" content={t("Messages.m6")} />
+            <MessageRows.Message sender="Barack Obama" content={t("Messages.m7")}/>
+            <MessageRows.Message sender="you" content={t("Messages.m8")} />
           </MessageRows.root>
         </section>
       </Page.root>

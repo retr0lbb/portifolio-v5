@@ -16,7 +16,6 @@ function LatestAcivity({repo}: {repo: any[]}){
     if(!repo){
         return
     }
-
     return(
         <Root key={1}>
             {

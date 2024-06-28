@@ -1,9 +1,11 @@
 "use client"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react";
-import { MdDarkMode, MdLightMode } from "react-icons/md";
+import { PiMoonFill } from "react-icons/pi";
 import { CgDarkMode } from "react-icons/cg";
 import { motion } from "framer-motion"
+import { Button } from "@nextui-org/react";
+import { MdWbSunny } from "react-icons/md";
 
 export const ThemeSwap: React.FC = () => {
     const {setTheme, theme, resolvedTheme} = useTheme()
@@ -17,23 +19,31 @@ export const ThemeSwap: React.FC = () => {
             </button>
         )
     }
+
     return(
-        <motion.button 
-        initial={{
-            rotate: 0
-        }}
-        whileTap={{
-            rotate: 360
-        }}
-            className="flex items-center justify-center rounded-lg p-0.5 border text-background-dark dark:text-background-ligth border-contrast-light/30 dark:border-contrast-dark/30" onClick={() => {
-            setTheme(resolvedTheme === "light"? "dark" : "light")
-        }}>
-            {theme === "light"? (
-                <MdDarkMode size={28} />
-            ): (
-                <MdLightMode size={28} />
-            )}
-            
-        </motion.button>
+        <Button 
+            variant="bordered" 
+            size="md" 
+            className="flex items-center justify-center text-xl" 
+            isIconOnly
+            onClick={()=> {
+                setTheme(resolvedTheme === "light"? "dark" : "light")
+            }}
+            >
+            <motion.div 
+                initial={{
+                    rotate: 0,
+                    opacity: 0
+                }}
+                animate={{
+                    rotate: theme === "light" ? 0 : -360,
+                    opacity: 1
+                }}
+                transition={{ duration: 0.3 }} // Duração da transição
+                className="text-2xl">
+                {theme === "light" && <MdWbSunny />}
+                {theme === "dark" && <PiMoonFill />}
+            </motion.div>
+        </Button>
     )
 }
