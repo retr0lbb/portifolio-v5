@@ -44,5 +44,10 @@
         "Title": "Contato:",
         "Activities": "Atividades Recentes:",
         "by": "Contato por:"
+    },
+    "Header": {
+        "Projetos": "Projetos",
+        "SobreMim": "Sobre Mim",
+        "Contato": "Contato"
     }
 }

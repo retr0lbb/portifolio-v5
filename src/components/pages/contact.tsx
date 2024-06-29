@@ -32,7 +32,7 @@ export const Contact: React.FC<ContactId> = ({id, repo}) => {
                     }}
                 className="">
                     <ContactCard.header imageAlt="beautiful person centered on the middle" imgSrc={Me} subtitle="Web developer" title="Henrique Barbosa"/>
-                    <ContactCard.body />
+                    <ContactCard.body gambs={t("by")} />
                 </ContactCard.root>
 
                 <LastActivity repo={repo}/>
