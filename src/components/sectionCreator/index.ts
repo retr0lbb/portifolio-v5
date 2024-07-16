@@ -1,7 +1,9 @@
 import { root } from "./root";
 import { title } from "./title";
 
-export default {
+const SectionCreator = {
     root,
     title
 }
+
+export default SectionCreator

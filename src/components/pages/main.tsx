@@ -4,11 +4,9 @@ import { FaWhatsapp, FaLinkedinIn, FaEnvelope } from "react-icons/fa"
 import { ChevronsDown } from "lucide-react"
 import { motion } from "framer-motion"
 import Page from "@/components/sectionCreator"
-import {useTranslations} from "next-intl"
 
 export const MainSection: React.FC = () => {
-    const t = useTranslations("Main")
-    const words = ["Web", "Mobile", "Game"]
+    const words = ["Web", "Mobile", "Desktop"]
     return(
         <Page.root id="home" initial={{opacity: 0}} animate={{opacity: 1}} className="relative h-screen">
             <motion.div
@@ -25,9 +23,9 @@ export const MainSection: React.FC = () => {
                 <ChevronsDown size={32} color="gray"/>
             </motion.div>
             <div className="w-full">
-                <p className="text-4xl md:text-6xl lg:text-9xl font-bold text-background-dark dark:text-background-ligth">Henrique Barbosa <br /></p>
-                <div className="text-2xl md:text-5xl lg:text-7xl font-bold text-contrast-dark dark:text-contrast-light">
-                    <FlipWords words={words} className="text-contrast-dark dark:text-background-ligth text-start p-0" /> Developer.
+                <p className="text-4xl md:text-6xl lg:text-9xl -mb-1 md:mb-2 lg:mb-4 font-bold text-zinc-950 dark:text-zinc-200">Henrique Barbosa <br /></p>
+                <div className="text-2xl md:text-5xl lg:text-7xl flex items-baseline">
+                    <FlipWords duration={2000} words={words} className="text-contrast-dark dark:text-zinc-200 font-bold text-start p-0" /> <p className="ml-5 dark:text-zinc-500 font-bold">Developer.</p>
                 </div>
             </div>
 

@@ -46,7 +46,7 @@ export default function Home({repo}: {repo: any[]}) {
   return (
     <main id="home" 
       className="scroll-smooth max-w-screen min-h-screen pb-32 flex flex-col items-center 
-      overflow-y-hidden overflow-hidden dark:bg-background-dark relative antialiased"
+      overflow-y-hidden overflow-hidden dark:bg-zinc-950 relative antialiased"
     >
       <HeroHeader.Build />
 

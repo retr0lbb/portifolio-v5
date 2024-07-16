@@ -17,9 +17,6 @@ const config: Config = {
   darkMode: "class",
   theme: {
     extend: {
-      animation: {
-        "meteor-effect": "meteor 5s linear infinite",
-      },
       colors: {
         background: {
           ligth: "#D9D9D9",

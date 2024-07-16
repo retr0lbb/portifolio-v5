@@ -41,8 +41,8 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     description={t("Nerd.desc")}
                     buttons={
                     <ProjectCard.links>
-                        <IconButton Icon={Github} isDarkmodeMandatory href="https://github.com/retr0lbb/N.E.R.D" />
-                        <IconButton Icon={Globe} isDarkmodeMandatory disabled />
+                        <IconButton isLightModeAllowed="no" Icon={Github} href="https://github.com/retr0lbb/N.E.R.D" />
+                        <IconButton isLightModeAllowed="no" Icon={Globe} disabled />
                     </ProjectCard.links>
                     }
                 >
@@ -55,8 +55,8 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     description={t("Vote.desc")}
                     buttons={
                     <ProjectCard.links>
-                        <IconButton Icon={Github} isDarkmodeMandatory href="https://github.com/retr0lbb/Vote-now" />
-                        <IconButton Icon={Globe} isDarkmodeMandatory href="https://vote-now-flame.vercel.app"/>
+                        <IconButton isLightModeAllowed="no" Icon={Github} href="https://github.com/retr0lbb/Vote-now" />
+                        <IconButton isLightModeAllowed="no" Icon={Globe} href="https://vote-now-flame.vercel.app"/>
                     </ProjectCard.links>
                     }
                 >
@@ -69,8 +69,8 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     description={t("Port.desc")}
                     buttons={
                     <ProjectCard.links>
-                        <IconButton isDarkmodeMandatory Icon={Github} href="https://github.com/retr0lbb/portifolio-v5"/>
-                        <IconButton isDarkmodeMandatory Icon={Globe} href="https://portifolio-v5.vercel.app"/>
+                        <IconButton isLightModeAllowed="no" Icon={Github} href="https://github.com/retr0lbb/portifolio-v5"/>
+                        <IconButton isLightModeAllowed="no" Icon={Globe} href="https://portifolio-v5.vercel.app"/>
                     </ProjectCard.links>
                     }
                 >
@@ -83,8 +83,8 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({id}) => {
                     description={t("Boom.desc")}
                     buttons={
                     <ProjectCard.links>
-                        <IconButton isDarkmodeMandatory Icon={Github} disabled />
-                        <IconButton isDarkmodeMandatory href="https://boomsneakers.com" Icon={Globe} />
+                        <IconButton isLightModeAllowed="no" Icon={Github} disabled />
+                        <IconButton isLightModeAllowed="no" href="https://boomsneakers.com" Icon={Globe} />
                     </ProjectCard.links>
                     }
                 >
