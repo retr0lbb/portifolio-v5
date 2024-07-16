@@ -26,22 +26,22 @@ Acesse [este link](https://portifolio-v5.vercel.app) para ver meu portfólio e c
 ### Clonar o Projeto
 
 1. **Clone o repositório localmente:**
-    ```sh
+    ```shell
     git clone https://github.com/retr0lbb/portifolio-v5.git
     ```
 
 2. **Instale as dependências:**
-    ```sh
+    ```shell
     npm install
     ```
 
 3. **Execute o projeto:**
-    ```sh
+    ```shell
     npm run dev
     ```
 
 4. **Faça o build do projeto (Opcional):**
-    ```sh
+    ```shell
     npm run build
     npm run start
     ```
