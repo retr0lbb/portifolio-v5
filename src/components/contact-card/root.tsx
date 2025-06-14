@@ -12,7 +12,7 @@ export const root: React.FC<rootProps> = ({className, children, ...rest}) => {
         <motion.div
             className={
                 twMerge
-                ("flex flex-col justify-center bg-contrast-light-dark/5 rounded-xl relative border dark:border-zinc-800 bg-zinc-900", className)}
+                ("flex flex-col justify-center bg-contrast-light-dark/5 rounded-xl relative border dark:border-zinc-800 dark:bg-zinc-900", className)}
             {...rest}
         >
             {children}

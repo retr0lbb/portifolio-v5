@@ -29,6 +29,7 @@ const loadData = async() => {
 
   return repo
 }
+
 export const getStaticProps: GetServerSideProps<any> = async (context) => {
   const repo = await loadData();
 
@@ -37,10 +38,10 @@ export const getStaticProps: GetServerSideProps<any> = async (context) => {
       props: {
         repo,
         messages
-      },
-      
+      }
   }
 }
+
 
 export default function Home({repo}: {repo: any[]}) {
   return (

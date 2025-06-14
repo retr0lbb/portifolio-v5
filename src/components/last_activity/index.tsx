@@ -1,5 +1,5 @@
 import {Repo} from "./repo"
-import {Root } from "./root"
+import {Root} from "./root"
 
 interface RepoDataProps {
     updated_at: string,
